@@ -19,17 +19,17 @@ export default function Hero(){
                 Where heritage meets contemporary luxury
             </p>
 
-            {/* Buttons: full width on mobile, auto width on desktop */}
+            {/* Buttons: content width on mobile, auto width on desktop */}
             <div className="flex flex-col md:flex-row items-start gap-4 w-full md:w-auto">
                 <Link
                     href="/shop"
-                    className="w-80 md:w-auto text-left px-8 py-4 bg-white text-black border-2 border-black hover:bg-black hover:text-white transition-all font-medium"
+                    className="w-fit md:w-auto text-left px-8 py-4 bg-white text-black border-2 border-black hover:bg-black hover:text-white transition-all font-medium"
                 >
                     SHOP THE COLLECTION
                 </Link>
                 <Link 
                     href="/heritage"
-                    className="w-70 md:w-auto text-left px-8 py-4 border-2 border-transparent hover:border-black transition-all font-medium"
+                    className="w-fit md:w-auto text-left px-8 py-4 border-2 border-transparent hover:border-black transition-all font-medium"
                 >
                     EXPLORE HERITAGE
                 </Link>
