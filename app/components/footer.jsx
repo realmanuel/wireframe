@@ -9,11 +9,11 @@ export default function Footer(){
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-8 md:gap-12 text-black">
                 <div>
                     <h3 className="font-semibold mb-9">NEWSLETTER</h3>
-                        <div className="flex gap-2 items-center">
-                            <input className="flex-1 px-3 py-3 border text-sm" 
+                        <div className="flex flex-col sm:flex-row gap-2 items-center">
+                            <input className="flex-1 w-full px-3 py-3 border text-sm" 
                                     placeholder="Your Email"
                             />
-                            <button className="px-4 py-3 bg-grey-300 border-2 text-black font-medium hover:bg-black hover:text-white transition">
+                            <button className="px-4 py-3 bg-grey-300 border-2 text-black font-medium hover:bg-black hover:text-white transition w-full sm:w-auto">
                                 SUBMIT
                             </button>
                         </div>
@@ -40,7 +40,7 @@ export default function Footer(){
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
-                <p className="text-sm">&copy; {new Date().getFullYear()} Ituenbasi</p>
+                <p className="text-sm text-black">&copy; {new Date().getFullYear()} Ituenbasi</p>
 
                 <div className="flex items-center gap-4">
             <a href="https://www.instagram.com/ituenbasi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded hover:border-2 hover:border-yellow-400 transition">
