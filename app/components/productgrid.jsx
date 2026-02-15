@@ -18,7 +18,7 @@ export default function ProductGrid(){
                 {products.map((p)=>(
                     <div
                         key={p.id}
-                        className="border hover:shadow-2xl transition p-4 text-center"
+                        className="border transform transition-transform duration-200 ease-out p-4 text-center hover:-translate-y-2 hover:scale-105 active:-translate-y-1 active:scale-105"
                     >
                         <div className="bg-gray-400 h-70 mb-4" />
                         <h3 className="text-black text-sm">{p.name}</h3>

@@ -65,7 +65,7 @@
             >
 
             {/* Logo */}
-                <img src="/IBL logo.png" className="h-18" />
+                <img src="/IBL logo.png" className="h-13" />
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex gap-7 text-sm">
