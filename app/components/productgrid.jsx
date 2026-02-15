@@ -9,7 +9,7 @@ const products = [
 
 export default function ProductGrid(){
     return(
-        <section className="max-w-full mx-auto px-4 sm:px-6 py-12 sm:py-20 bg-white">
+        <section className="w-full max-w-full mx-auto px-4 sm:px-6 py-12 sm:py-20 bg-white overflow-x-hidden">
             <h2 className="text-3xl font-semibold mb-10 text-center text-black">
                 FEATURED PIECES
             </h2>

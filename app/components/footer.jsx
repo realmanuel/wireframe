@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function Footer(){
     return(
-        <footer className="bg-white w-full border-t-2 border-black">
+        <footer className="bg-white w-full border-t-2 border-black overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-8 md:gap-12 text-black">
                 <div>
                     <h3 className="font-semibold mb-9">NEWSLETTER</h3>

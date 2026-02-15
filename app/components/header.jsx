@@ -17,6 +17,16 @@
     const [searchOpen, setSearchOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
+    /* Prevent body scroll when menu is open */
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.classList.add("menu-open");
+        } else {
+            document.body.classList.remove("menu-open");
+        }
+        return () => document.body.classList.remove("menu-open");
+    }, [menuOpen]);
+
     /* scroll detection */
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -41,7 +51,7 @@
         <header
             className={`
             fixed top-0 left-0 w-full z-50
-            transition-all duration-300
+            transition-all duration-300 
             ${scrolled ? "bg-white shadow-sm" : "bg-gray-200"}
             `}
         >
@@ -70,20 +80,20 @@
             <div className="flex items-center gap-4 stroke-black">
                 {/* SEARCH */}
                 <MagnifyingGlassIcon
-                className="h-5 w-5 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400"
+                className="h-6 w-6 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400"
                 onClick={() => setSearchOpen(true)}
                 />
 
-                <HeartIcon className="h-5 w-5 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
-                <ShoppingBagIcon className="h-5 w-5 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
-                <UserIcon className="h-5 w-5 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
+                <HeartIcon className="h-6 w-6  cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
+                <ShoppingBagIcon className="h-6 w-6 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
+                <UserIcon className="h-6 w-6 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
 
                 {/* Mobile menu button */}
                 <button
                     className="lg:hidden hover:opacity-60 transition-opacity p-1 rounded hover:border-2 hover:border-yellow-400"
                     onClick={() => setMenuOpen(true)}
                 >
-                    <Bars3Icon className="h-6 w-6 stroke-black" />
+                    <Bars3Icon className="h-7 w-7 stroke-black" />
                 </button>
             </div>
             </div>
@@ -123,7 +133,7 @@
         {/* Side menu */}
         <aside
             className={`
-            fixed top-0 right-0 h-full w-72 bg-white z-50 text-black
+            fixed top-0 right-0 h-full w-64 sm:w-72 bg-white z-50 text-black
             transform transition-transform duration-300
             ${menuOpen ? "translate-x-0" : "translate-x-full"}
             `}

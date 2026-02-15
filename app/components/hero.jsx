@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero(){
     return (
-        <section className="mt-0 min-h-screen flex flex-col justify-center items-center md:items-start py-16 sm:py-20 md:py-28 px-6 md:px-20 bg-white text-black border-b-2 border-black">
+        <section className="mt-0 min-h-screen flex flex-col justify-center items-center md:items-start py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-20 bg-white text-black border-b-2 border-black overflow-x-hidden">
             
             <h2 className="text-xs md:text-sm tracking-widest mb-4">
                 NEW COLLECTION

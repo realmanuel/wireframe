@@ -10,10 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="flex flex-col min-h-screen bg-white"
+        className="flex flex-col min-h-screen bg-white overflow-x-hidden"
       >
         <Header />
-        <main className="flex-grow pt-16 sm:pt-20">
+        <main className="flex-grow">
           {children}
         </main>
         
