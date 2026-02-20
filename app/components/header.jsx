@@ -2,17 +2,20 @@
 
     import { useState, useEffect } from "react";
     import Link from "next/link";
+    import { useStore } from "../../context/storeContext";
+    import CartSidebar from "./CartSidebar";    
 
     import {
     MagnifyingGlassIcon,
     HeartIcon,
-    ShoppingBagIcon,
     UserIcon,
+    ShoppingCartIcon,
     Bars3Icon,
     XMarkIcon,
     } from "@heroicons/react/24/outline";
 
     export default function Header() {
+    const { wishlist, setIsCartOpen, cart } = useStore();
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -45,6 +48,7 @@
         ["Contact", "/contact"],
     ];
 
+        
     return (
         <>
         {/* ================= HEADER ================= */}
@@ -70,30 +74,44 @@
             {/* Desktop nav */}
             <nav className="hidden lg:flex gap-7 text-sm">
                 {links.map(([name, href]) => (
-                <Link key={name} href={href} className="hover:opacity-60 text-black">
+                <Link key={name} href={href} className="hover:border-b-2 text-black">
                     {name}
                 </Link>
                 ))}
             </nav>
 
             {/* Icons */}
-            <div className="flex items-center gap-4 stroke-black">
+            <div className="flex items-center gap-4 stroke-black relative">
                 {/* SEARCH */}
                 <MagnifyingGlassIcon
-                className="h-6 w-6 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400"
+                className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400"
                 onClick={() => setSearchOpen(true)}
                 />
 
-                <HeartIcon className="h-6 w-6  cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
-                <ShoppingBagIcon className="h-6 w-6 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
-                <UserIcon className="h-6 w-6 cursor-pointer stroke-black p-1 rounded transition hover:border-2 hover:border-yellow-400" />
+                <div className="relative">
+                <HeartIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                {wishlist.length > 0 && (
+                    <span className="absolute -top-1 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        {wishlist.length}
+                    </span>
+                )}
+                </div>
+                <UserIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <button onClick={()=> setIsCartOpen(true)} className="relative">
+                    <ShoppingCartIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                    {cart.length > 0 && (
+                        <span className="absolute -top-1 -right-2 bg-white text-black text-xs rounded-full px-1">
+                            {cart.length}
+                        </span>
+                    )}
+                </button>
 
                 {/* Mobile menu button */}
                 <button
-                    className="lg:hidden hover:opacity-60 transition-opacity p-1 rounded hover:border-2 hover:border-yellow-400"
+                    className="lg:hidden hover:opacity-60 transition-opacity p-2 rounded hover:border-2 hover:border-yellow-400"
                     onClick={() => setMenuOpen(true)}
                 >
-                    <Bars3Icon className="h-7 w-7 stroke-black" />
+                    <Bars3Icon className="h-10 w-10 stroke-black" />
                 </button>
             </div>
             </div>
@@ -119,6 +137,7 @@
             </div>
             </div>
         </header>
+        <CartSidebar />
 
         {/* ================= MOBILE DRAWER ================= */}
 
@@ -152,7 +171,7 @@
                 <Link
                     key={name}
                     href={href}
-                    className="block hover:opacity-60 transition-opacity"
+                    className="block hover:border max-w-fit transition-opacity"
                     onClick={() => setMenuOpen(false)}
                 >
                     {name}

@@ -1,6 +1,8 @@
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import {StoreProvider} from "../context/storeContext"
+import CartSidebar from "./components/CartSidebar";
 
 export default function RootLayout({
   children,
@@ -12,12 +14,14 @@ export default function RootLayout({
       <body
         className="flex flex-col min-h-screen bg-white overflow-x-hidden"
       >
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        
-        <Footer />
+        <StoreProvider>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );
