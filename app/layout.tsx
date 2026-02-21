@@ -13,6 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className="flex flex-col min-h-screen bg-white overflow-x-hidden"
+        suppressHydrationWarning
       >
         <StoreProvider>
           <Header />
