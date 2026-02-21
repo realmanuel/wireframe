@@ -10,7 +10,7 @@ export default function ProductCard({ product, onQuickAdd }) {
     const isWishlisted = wishlist.some((item) => item.id === product.id);
     return (
         <div className="px-1">
-            <div className="relative bg-white p-3 transform transition-transform duration-200 ease-out hover:translate-y-2 hover:scale-105 active:-translate-y-1  border border-black gap-8">
+            <div className="relative bg-white p-3 transform transition-transform duration-200 ease-out hover:translate-y-1 hover:scale-105 active:-translate-y-1  border border-black gap-8">
                 {/* Heart */}
                 <button
                     onClick={() => toggleWishlist(product)}

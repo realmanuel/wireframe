@@ -81,18 +81,15 @@
             </nav>
 
             {/* Icons */}
-            <div className="flex items-center gap-4 stroke-black relative">
+            <div className="flex items-center gap-2 sm:gap-4 stroke-black relative">
                 {/* SEARCH */}
                 <MagnifyingGlassIcon
-                className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400"
+                className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400"
                 onClick={() => setSearchOpen(true)}
                 />
-
-                <UserIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
-                <button onClick={()=> setIsCartOpen(true)} className="relative">
-
+                <UserIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
                 <div className="relative">
-                <HeartIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <HeartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
                 {wishlist.length > 0 && (
                     <span className="absolute -top-1 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                         {wishlist.length}
@@ -100,7 +97,8 @@
                 )}
                 </div>
                 
-                    <ShoppingCartIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <button onClick={()=> setIsCartOpen(true)} className="relative">
+                    <ShoppingCartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
                     {cart.length > 0 && (
                         <span className="absolute -top-1 -right-2 bg-white text-black text-xs rounded-full px-1">
                             {cart.length}
@@ -110,10 +108,10 @@
 
                 {/* Mobile menu button */}
                 <button
-                    className="lg:hidden hover:opacity-60 transition-opacity p-2 rounded hover:border-2 hover:border-yellow-400"
+                    className="lg:hidden hover:opacity-60 transition-opacity p-1 sm:p-2 rounded hover:border-2 hover:border-yellow-400"
                     onClick={() => setMenuOpen(true)}
                 >
-                    <Bars3Icon className="h-10 w-10 stroke-black" />
+                    <Bars3Icon className="h-7 w-7 sm:h-10 sm:w-10 stroke-black" />
                 </button>
             </div>
             </div>
@@ -134,7 +132,7 @@
                 />
 
                 <button onClick={() => setSearchOpen(false)} className="p-1 rounded hover:border-2 hover:border-yellow-400 transition cursor-pointer">
-                <XMarkIcon className="h-6 w-6 stroke-black" />
+                <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
                 </button>
             </div>
             </div>
@@ -159,25 +157,27 @@
             ${menuOpen ? "translate-x-0" : "translate-x-full"}
             `}
         >
-            <div className="p-6">
+            <div className="p-6 flex flex-col gap-10 relative">
             <button
                 type="button"
-                className="mb-6 hover:opacity-60 transition-opacity cursor-pointer p-1 rounded hover:border-2 hover:border-yellow-400"
+                className="mb-6 hover:opacity-60 transition-opacity cursor-pointer p-1 rounded hover:border-2 absolute right-0 hover:border-yellow-400"
                 onClick={() => setMenuOpen(false)}
             >
-                <XMarkIcon className="h-6 w-6 stroke-black" />
+                <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
             </button>
 
-            <nav className="space-y-5 text-sm">
+            <nav className="text-sm space-y-4">
                 {links.map(([name, href]) => (
-                <Link
-                    key={name}
-                    href={href}
-                    className="block hover:border max-w-fit transition-opacity"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    {name}
-                </Link>
+                <div key={name}>
+                    <Link
+                        href={href}
+                        className="block hover:border transition-opacity py-3 px-4"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        {name}
+                    </Link>
+                    <hr className="border-t border-black"/>
+                </div>
                 ))}
             </nav>
             </div>
