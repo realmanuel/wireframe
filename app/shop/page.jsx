@@ -6,15 +6,61 @@ import ProductModal from "./components/ProductModal";
 import QuickAddModal from "./components/QuickAddModal";
 
 const ProductsDemo =[
-    { id:1, name: "Product 1", price: "₦15,000", img: "/p1.jpg"},
-    { id:2, name: "Product 2", price: "₦18,000", img: "/p2.jpg"},
-    { id:3, name: "Product 3", price: "₦20,000", img: "/p3.jpg"},
-    { id:4, name: "Product 4", price: "₦22,000", img: "/p4.jpg"},
-    { id:5, name: "Product 5", price: "₦16,000", img: "/p5.jpg"},
-    { id:6, name: "Product 6", price: "₦19,000", img: "/p6.jpg"},
-    { id:7, name: "Product 7", price: "₦24,000", img: "/p7.jpg"},
-    { id:8, name: "Product 8", price: "₦17,000", img: "/p8.jpg"},
-    { id:9, name: "Product 9", price: "₦21,000", img: "/p9.jpg"},
+    { id:1, name: "Product 1", img: "/p1.jpg",
+        variants: [
+            {id:101, size: "S", color: "black", price: 15000},
+            {id:102, size: "M", color: "white", price: 15000},
+            {id:103, size: "L", color: "brown", price: 15000},
+        ]
+    },
+    { id:2, name: "Product 2", img: "/p2.jpg",
+        variants: [
+            {id:201, size: "S", color: "black", price: 18000},
+            {id:202, size: "M", color: "white", price: 18000},
+            {id:203, size: "L", color: "brown", price: 18000},
+        ]},
+    { id:3, name: "Product 3", img: "/p3.jpg",
+        variants: [
+            {id:301, size: "S", color: "black", price: 20000},
+            {id:302, size: "M", color: "white", price: 20000},
+            {id:303, size: "L", color: "brown", price: 20000},
+        ]},
+    { id:4, name: "Product 4", img: "/p4.jpg",
+        variants: [
+            {id:401, size: "S", color: "black", price: 22000},
+            {id:402, size: "M", color: "white", price: 22000},
+            {id:403, size: "L", color: "brown", price: 22000},
+        ]},
+    { id:5, name: "Product 5", img: "/p5.jpg",
+        variants: [
+            {id:501, size: "S", color: "black", price: 16000},
+            {id:502, size: "M", color: "white", price: 16000},
+            {id:503, size: "L", color: "brown", price: 16000},
+        ]},
+    { id:6, name: "Product 6", img: "/p6.jpg",
+        variants: [
+            {id:601, size: "S", color: "black", price: 19000},
+            {id:602, size: "M", color: "white", price: 19000},
+            {id:603, size: "L", color: "brown", price: 19000 },
+        ]},
+    { id:7, name: "Product 7", img: "/p7.jpg",
+        variants: [
+            {id:701, size: "S", color: "black", price: 24000},
+            {id:702, size: "M", color: "black", price: 24000},
+            {id:703, size: "L", color: "brown", price: 24000},
+        ]},
+    { id:8, name: "Product 8", img: "/p8.jpg",
+        variants: [
+            {id:801, size: "S", color: "black", price: 17000},
+            {id:802, size: "M", color: "white", price: 17000},
+            {id:803, size: "L", color: "brown", price: 17000},
+        ]},
+    { id:9, name: "Product 9", img: "/p9.jpg",
+        variants: [
+            {id:901, size: "S", color: "black", price: 21000},
+            {id:902, size: "M", color: "white", price: 21000},
+            {id:903, size: "L", color: "brown", price: 21000},
+        ]},
 ]
 
 export default function Shop(){
