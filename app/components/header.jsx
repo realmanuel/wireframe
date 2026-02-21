@@ -88,6 +88,9 @@
                 onClick={() => setSearchOpen(true)}
                 />
 
+                <UserIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <button onClick={()=> setIsCartOpen(true)} className="relative">
+
                 <div className="relative">
                 <HeartIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
                 {wishlist.length > 0 && (
@@ -96,8 +99,7 @@
                     </span>
                 )}
                 </div>
-                <UserIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
-                <button onClick={()=> setIsCartOpen(true)} className="relative">
+                
                     <ShoppingCartIcon className="h-10 w-10 cursor-pointer stroke-black p-2 rounded transition hover:border-2 hover:border-yellow-400" />
                     {cart.length > 0 && (
                         <span className="absolute -top-1 -right-2 bg-white text-black text-xs rounded-full px-1">
