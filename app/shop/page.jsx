@@ -1,9 +1,9 @@
 "use client";
 
 import {useState} from "react";
-import ProductCard from "./components/ProductCard";
-import ProductModal from "./components/ProductModal";
-import QuickAddModal from "./components/QuickAddModal";
+import ProductCard from "../components/ProductCard";
+import ProductModal from "../components/ProductModal";
+import QuickAddModal from "../components/QuickAddModal";
 
 const ProductsDemo =[
     { id:1, name: "Product 1", img: "/c1.jpg",
