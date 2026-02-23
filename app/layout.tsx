@@ -3,6 +3,12 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import {StoreProvider} from "../context/storeContext"
 import CartSidebar from "./components/CartSidebar";
+import {Poppins} from "next/font/google"
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight:["300", "400", "500", "600", "700"]
+})
 
 export default function RootLayout({
   children,
@@ -12,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="flex flex-col min-h-screen bg-white overflow-x-hidden"
+        className={`${poppins.className} flex flex-col min-h-screen bg-white overflow-x-hidden`}
         suppressHydrationWarning
       >
         <StoreProvider>

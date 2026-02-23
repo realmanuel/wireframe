@@ -29,7 +29,7 @@ export default function Hero(){
                 </Link>
                 <Link 
                     href="/heritage"
-                    className="w-fit md:w-auto text-left px-8 py-4 border-2 border-transparent hover:border-black transition-all font-medium"
+                    className="w-fit md:w-auto text-left px-8 py-4 border-2 border-transparent hover:border-black transition-all font-medium border-b-2"
                 >
                     EXPLORE HERITAGE
                 </Link>
