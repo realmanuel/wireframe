@@ -58,7 +58,7 @@ export default function Shop(){
             <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-6 py-8 bg-white">
                 {/**TITLE, */}
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center mt-12 mb-12 text-black tracking-widest">BEST SELLERS</h1>
-                <h3 className="text-black text-sm text-center mb-10">Everyday icons. Bold reimaginings</h3>
+
 
 
                 {/**GRID */}
@@ -73,11 +73,11 @@ export default function Shop(){
                 </div>
                 
                 <div className="flex justify-center gap-3 mt-10 text-sm">
-                    <button className="px-3 py-1 border">Prev</button>
-                    <button className="px-3 py-1 border">1</button>
-                    <button className="px-3 py-1 border">2</button>
-                    <button className="px-3 py-1 border">3</button>
-                    <button className="px-3 py-1 border">Next</button>
+                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">Prev</button>
+                    <button className="px-3 py-1 border aspect-square bg-black text-white">1</button>
+                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">2</button>
+                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">3</button>
+                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">Next</button>
 
                 </div>
 
