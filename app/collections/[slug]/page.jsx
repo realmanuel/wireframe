@@ -1,81 +1,136 @@
-"use client";
+    import Image from "next/image";
+    import Link from "next/link";
+    import { notFound } from "next/navigation";
 
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { collectionsData } from "../../../lib/collectionsData";
+    const collectionsData = {
+    "nkoyo": {
+        title: "NKOYO",
+        description:
+        "A mother's story. Waste-not philosophy woven into every thread.",
+        banner: "/c1.jpg",
+        products: [
+        { id: 1, name: "Nkoyo Dress", price: "₦45,000", img: "/p1.jpg" },
+        { id: 2, name: "Nkoyo Top", price: "₦25,000", img: "/p2.jpg" },
+        { id: 3, name: "Nkoyo Set", price: "₦60,000", img: "/p3.jpg" },
+        ],
+    },
 
-export default function CollectionPage({ params }) {
-    const collection = collectionsData.find(
-        (c) => c.slug === params.slug
-    );
+    "dear-george": {
+        title: "DEAR GEORGE",
+        description:
+        "Liberation redefined. Who is George? Perhaps it's you.",
+        banner: "/c1.jpg",
+        products: [
+        { id: 4, name: "George Jacket", price: "₦55,000", img: "/p1.jpg" },
+        { id: 5, name: "George Shirt", price: "₦30,000", img: "/p2.jpg" },
+        ],
+    },
+
+    "kith-and-kin": {
+        title: "KITH AND KIN",
+        description:
+        "A labour of love. A reflection of Nigeria, of us.",
+        banner: "/c1.jpg",
+        products: [
+        { id: 6, name: "Kin Robe", price: "₦48,000", img: "/p1.jpg" },
+        ],
+    },
+
+    "ekemini": {
+        title: "EKEMINI",
+        description:
+        "Contemporary elegance meets traditional craft.",
+        banner: "/c1.jpg",
+        products: [],
+    },
+
+    "balogun": {
+        title: "BALOGUN",
+        description:
+        "Strength and grace. A celebration of character.",
+        banner: "/c1.jpg",
+        products: [],
+    },
+
+    "iconic-pieces": {
+        title: "ICONIC PIECES",
+        description:
+        "Signature designs. Timeless statements.",
+        banner: "/c1.jpg",
+        products: [],
+    },
+    };
+
+    export default function CollectionPage({ props }) {
+    // const params = await props.name;
+    // const slug = params.slug.toLowerCase();
+    // const collection = collectionsData[slug];
 
     if (!collection) return notFound();
 
     return (
-        <div className="bg-white">
+        <div className="bg-white min-h-screen">
 
-        {/* HERO */}
-        <div className="relative w-full h-[60vh]">
+        {/* HERO BANNER */}
+        <div className="relative w-full h-[50vh] md:h-[60vh]">
             <Image
-            src={collection.hero}
-            alt={collection.name}
+            src={collection.banner}
+            alt={collection.title}
             fill
             className="object-cover"
+            priority
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-center text-white px-6">
-            <div>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-widest mb-4">
-                {collection.name}
-                </h1>
-                <p className="max-w-2xl mx-auto text-sm md:text-base">
-                {collection.longDescription}
-                </p>
-            </div>
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="text-white text-3xl md:text-5xl font-bold tracking-widest">
+                {collection.title}
+            </h1>
             </div>
         </div>
 
+        {/* DESCRIPTION */}
+        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+            <p className="text-gray-700 text-lg leading-relaxed">
+            {collection.description}
+            </p>
+        </div>
+
         {/* PRODUCTS GRID */}
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 pb-20">
 
-            <h2 className="text-2xl font-semibold mb-10 text-center">
-            Explore the Collection
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            {collection.products.map((product) => (
+            {collection.products.length === 0 ? (
+            <p className="text-center text-gray-500">
+                No products available yet.
+            </p>
+            ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {collection.products.map((product) => (
                 <Link
-                key={product.id}
-                href={`/product/${product.id}`}
-                className="block"
+                    key={product.id}
+                    href={`/products/${product.id}`}
+                    className="group block"
                 >
-                <div className="border rounded-lg overflow-hidden hover:shadow-lg transition">
-
-                    <div className="relative h-80">
+                    <div className="relative aspect-square overflow-hidden bg-gray-100">
                     <Image
                         src={product.img}
                         alt={product.name}
                         fill
-                        className="object-cover"
+                        className="object-cover group-hover:scale-105 transition duration-300"
                     />
                     </div>
 
-                    <div className="p-4">
-                    <h3 className="font-medium">
+                    <div className="mt-4 text-center">
+                    <h3 className="text-sm font-medium text-black">
                         {product.name}
                     </h3>
                     <p className="text-gray-600 mt-1">
-                        ₦{product.price.toLocaleString()}
+                        {product.price}
                     </p>
                     </div>
-
-                </div>
                 </Link>
-            ))}
-
+                ))}
             </div>
+            )}
         </div>
         </div>
     );
-}
+    }

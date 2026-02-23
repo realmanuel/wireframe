@@ -2,7 +2,7 @@
 
     import { useState, useMemo } from "react";
     import { X } from "lucide-react";
-    import { useStore } from "../../../context/storeContext";
+    import { useStore } from "../../context/storeContext";
 
     export default function QuickAddModal({ product, onClose }) {
     const { addToCart } = useStore();
