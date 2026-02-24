@@ -38,14 +38,14 @@
     }, []);
 
     const links = [
-        ["Home", "/"],
-        ["Shop", "/shop"],
-        ["Collections", "/collections"],
-        ["Best Sellers", "/best-sellers"],
-        ["Gift Cards", "/gift-cards"],
-        ["Heritage", "/heritage"],
-        ["Lookbook", "/lookbook"],
-        ["Contact", "/contact"],
+        ["HOME", "/"],
+        ["SHOP", "/shop"],
+        ["COLLECTIONS", "/collections"],
+        ["BEST SELLERS", "/best-sellers"],
+        ["GIFT CARDS", "/gift-cards"],
+        ["HERITAGE", "/heritage"],
+        ["LOOKBOOK", "/lookbook"],
+        ["CONTACT", "/contact"],
     ];
 
         
