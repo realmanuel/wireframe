@@ -56,7 +56,7 @@
             className={`
             fixed top-0 left-0 w-full z-50
             transition-all duration-300 
-            ${scrolled ? "bg-white shadow-sm" : "bg-gray-200"}
+            ${scrolled ? "bg-white shadow-sm" : "bg-white"}
             `}
         >
             <div
