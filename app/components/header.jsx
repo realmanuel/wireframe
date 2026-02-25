@@ -158,28 +158,28 @@
             `}
         >
             <div className="p-6 flex flex-col gap-10 relative">
-            <button
-                type="button"
-                className="mb-6 hover:opacity-60 transition-opacity cursor-pointer p-1 rounded hover:border-2 absolute right-0 hover:border-yellow-400"
-                onClick={() => setMenuOpen(false)}
-            >
-                <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
-            </button>
+                <button
+                    type="button"
+                    className="mb-6 hover:opacity-60 transition-opacity cursor-pointer p-1 rounded hover:border-2 absolute right-0 hover:border-yellow-400"
+                    onClick={() => setMenuOpen(false)}
+                >
+                    <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
+                </button>
 
-            <nav className="text-sm space-y-4">
-                {links.map(([name, href]) => (
-                <div key={name}>
-                    <Link
-                        href={href}
-                        className="block hover:border transition-opacity py-3 px-4"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        {name}
-                    </Link>
-                    <hr className="border-t border-black"/>
+                <nav className="text-sm space-y-4">
+                    {links.map(([name, href]) => (
+                    <div key={name}>
+                        <Link
+                            href={href}
+                            className="block hover:border transition-opacity py-3 px-4"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            {name}
+                        </Link>
+                        <hr className="border-t border-black"/>
                 </div>
                 ))}
-            </nav>
+                </nav>
             </div>
         </aside>
         </>

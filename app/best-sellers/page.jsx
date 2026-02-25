@@ -57,7 +57,7 @@ export default function Shop(){
         <section className="mt-0 min-h-screen flex flex-col justify-center items-start py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-20 bg-white text-black border-b-2 border-black overflow-x-hidden">
             <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-6 py-8 bg-white">
                 {/**TITLE, */}
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center mt-12 mb-12 text-black tracking-widest">BEST SELLERS</h1>
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-12 mb-12 text-black tracking-widest">BEST SELLERS</h1>
 
 
 

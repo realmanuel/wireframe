@@ -16,7 +16,7 @@ export default function Collections() {
     return(
         <div className="max-w-full mx-auto px-6 py-16 bg-white">
             {/**Page Title */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center mt-12 mb-12 text-black tracking-widest">COLLECTIONS</h1>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-12 mb-12 text-black tracking-widest">COLLECTIONS</h1>
             <p className="text-black text-center mb-9">Each collection is a narrative. A story told through fabric, form, and the audacious spirit of those who wear it. We don't follow trends—we create them.</p>
             <p className="text-black text-center mb-12">From the waste-not philosophy of Nkoyo to the liberating question of Dear George, our collections are conversations with culture, heritage, and individuality.</p>
             {/**Collection grid */}
