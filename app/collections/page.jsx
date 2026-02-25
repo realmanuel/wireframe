@@ -24,16 +24,16 @@ export default function Collections() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {collections.map((collection)=>(
                     <Link key={collection.id} href={`/collections/${collection.slug}`} className="text-black block h-full">
-                        <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transform transition-transform duration-300 hover:-translate-y-3 h-96 flex flex-col">
-                            <div className="relative group bg-gray-200 overflow-hidden aspect-square flex items-center justify-center">
+                        <div className="bg-white border border-black overflow-hidden shadow-sm hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1 flex flex-col">
+                            <div className="relative group bg-white overflow-hidden aspect-3/4 flex items-center justify-center">
                                 <Image 
                                     src={collection.img}
                                     alt={collection.name}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover "
                                 />
                             </div>
-                            <div className="p-4 h-24">
+                            <div className="p-4 h-32">
                                 <h2 className="text-lg font-semibold tracking-wide text-black">{collection.name}</h2>
                                 <p className="mt-2 text-sm text-black">{collection.description}</p>
                             </div>

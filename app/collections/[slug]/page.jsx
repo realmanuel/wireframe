@@ -1,136 +1,110 @@
-    import Image from "next/image";
-    import Link from "next/link";
-    import { notFound } from "next/navigation";
+    import Image from "next/image"
+    import { notFound } from "next/navigation"
 
-    const collectionsData = {
+    const collections = {
     "nkoyo": {
-        title: "NKOYO",
-        description:
-        "A mother's story. Waste-not philosophy woven into every thread.",
-        banner: "/c1.jpg",
-        products: [
-        { id: 1, name: "Nkoyo Dress", price: "₦45,000", img: "/p1.jpg" },
-        { id: 2, name: "Nkoyo Top", price: "₦25,000", img: "/p2.jpg" },
-        { id: 3, name: "Nkoyo Set", price: "₦60,000", img: "/p3.jpg" },
-        ],
+        name: "NKOYO",
+        description: "A mother's story. Waste-not philosophy woven into every thread.",
+        price: "₦85,000",
+        image: "/c1.jpg",
     },
-
     "dear-george": {
-        title: "DEAR GEORGE",
-        description:
-        "Liberation redefined. Who is George? Perhaps it's you.",
-        banner: "/c1.jpg",
-        products: [
-        { id: 4, name: "George Jacket", price: "₦55,000", img: "/p1.jpg" },
-        { id: 5, name: "George Shirt", price: "₦30,000", img: "/p2.jpg" },
-        ],
+        name: "DEAR GEORGE",
+        description: "Liberation redefined. Who is George? Perhaps it's you.",
+        price: "₦95,000",
+        image: "/c1.jpg",
     },
-
     "kith-and-kin": {
-        title: "KITH AND KIN",
-        description:
-        "A labour of love. A reflection of Nigeria, of us.",
-        banner: "/c1.jpg",
-        products: [
-        { id: 6, name: "Kin Robe", price: "₦48,000", img: "/p1.jpg" },
-        ],
+        name: "KITH AND KIN",
+        description: "A labour of love. A reflection of Nigeria, of us.",
+        price: "₦90,000",
+        image: "/c1.jpg",
     },
-
     "ekemini": {
-        title: "EKEMINI",
-        description:
-        "Contemporary elegance meets traditional craft.",
-        banner: "/c1.jpg",
-        products: [],
+        name: "EKEMINI",
+        description: "Contemporary elegance meets traditional craft.",
+        price: "₦110,000",
+        image: "/c1.jpg",
     },
-
     "balogun": {
-        title: "BALOGUN",
-        description:
-        "Strength and grace. A celebration of character.",
-        banner: "/c1.jpg",
-        products: [],
+        name: "BALOGUN",
+        description: "Strength and grace. A celebration of character.",
+        price: "₦120,000",
+        image: "/c1.jpg",
     },
-
     "iconic-pieces": {
-        title: "ICONIC PIECES",
-        description:
-        "Signature designs. Timeless statements.",
-        banner: "/c1.jpg",
-        products: [],
+        name: "ICONIC PIECES",
+        description: "Signature designs. Timeless statements.",
+        price: "₦150,000",
+        image: "/c1.jpg",
     },
-    };
+    }
 
-    export default function CollectionPage({ props }) {
-    // const params = await props.name;
-    // const slug = params.slug.toLowerCase();
-    // const collection = collectionsData[slug];
+    export default async function CollectionPage({ params }) {
+    const { slug } = await params
 
-    if (!collection) return notFound();
+    const collection = collections[slug]
+
+    if (!collection) {
+        return notFound()
+    }
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-white min-h-screen text-black px-6 py-16">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
-        {/* HERO BANNER */}
-        <div className="relative w-full h-[50vh] md:h-[60vh]">
+            {/* LEFT IMAGE */}
+            <div className="relative w-full aspect-square bg-gray-100">
             <Image
-            src={collection.banner}
-            alt={collection.title}
-            fill
-            className="object-cover"
-            priority
+                src={collection.image}
+                alt={collection.name}
+                fill
+                className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <h1 className="text-white text-3xl md:text-5xl font-bold tracking-widest">
-                {collection.title}
+            </div>
+
+            {/* RIGHT INFO */}
+            <div>
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-wide mb-4">
+                {collection.name}
             </h1>
-            </div>
-        </div>
 
-        {/* DESCRIPTION */}
-        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
-            <p className="text-gray-700 text-lg leading-relaxed">
-            {collection.description}
+            <p className="text-lg mb-6">
+                {collection.price}
             </p>
-        </div>
 
-        {/* PRODUCTS GRID */}
-        <div className="max-w-7xl mx-auto px-6 pb-20">
-
-            {collection.products.length === 0 ? (
-            <p className="text-center text-gray-500">
-                No products available yet.
+            <p className="text-sm leading-relaxed mb-8">
+                {collection.description}
             </p>
-            ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {collection.products.map((product) => (
-                <Link
-                    key={product.id}
-                    href={`/products/${product.id}`}
-                    className="group block"
-                >
-                    <div className="relative aspect-square overflow-hidden bg-gray-100">
-                    <Image
-                        src={product.img}
-                        alt={product.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition duration-300"
-                    />
-                    </div>
 
-                    <div className="mt-4 text-center">
-                    <h3 className="text-sm font-medium text-black">
-                        {product.name}
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                        {product.price}
-                    </p>
-                    </div>
-                </Link>
+            {/* SIZE */}
+            <div className="mb-6">
+                <p className="text-sm mb-2">Size</p>
+                <div className="flex gap-3">
+                {["S", "M", "L", "XL"].map((size) => (
+                    <button
+                    key={size}
+                    className="border border-black px-4 py-2 text-sm hover:bg-black hover:text-white transition"
+                    >
+                    {size}
+                    </button>
                 ))}
+                </div>
             </div>
-            )}
+
+            {/* BUTTONS */}
+            <div className="flex gap-4">
+                <button className="bg-black text-white px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">
+                ADD TO CART
+                </button>
+
+                <button className="border border-black px-6 py-3 text-sm tracking-wide hover:bg-black hover:text-white transition">
+                ADD TO WISHLIST
+                </button>
+            </div>
+
+            </div>
         </div>
         </div>
-    );
+    )
     }
