@@ -23,13 +23,17 @@ export default function Hero(){
             <div className="flex flex-col md:flex-row items-start gap-4 w-full md:w-auto">
                 <Link
                     href="/shop"
-                    className="w-fit md:w-auto text-left px-8 py-4 bg-white text-black border-2 border-black hover:bg-black hover:text-white transition-all font-medium"
+                    className="w-fit md:w-auto text-left px-8 py-4 transition-all font-medium border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                                            hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
+                                                            text-sm tracking-widest"
                 >
                     SHOP THE COLLECTION
                 </Link>
                 <Link 
                     href="/heritage"
-                    className="w-fit md:w-auto text-left px-8 py-4 border-2 border-transparent hover:border-black transition-all font-medium border-b-2"
+                    className="w-fit md:w-auto text-left px-8 py-4 transition-all font-medium border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                                            hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
+                                                            text-sm tracking-widest"
                 >
                     EXPLORE HERITAGE
                 </Link>

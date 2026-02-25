@@ -31,10 +31,10 @@ import Image from "next/image";
                                     <h2 className="text-sm italic text-black text-center">{book.title}</h2>
                                     <div className="mt-3 flex justify-center">
                                         <button className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
-                                            hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
-                                            text-sm tracking-widest items-center"
+                                                            hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
+                                                            text-sm tracking-widest"
                                         >
-                                            SHOP THE STORY
+                                            VIEW LOOKBOOK
                                         </button>
                                     </div>
                                 </div>

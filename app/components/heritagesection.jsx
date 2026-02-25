@@ -10,9 +10,15 @@ export default function HeritageSection() {
                 <p className="mt-4 text-black leading-relaxed">
                     Our heritage is not nostalgia. It is a living language. We draw from culture, arts, and the rich tapestry of Nigerian tradition, reinterpreting Ankara with contemporary vision. Every piece is crafted with artisanal attention to detail, waste-conscious making, and a commitment to timeless elegance over trend-following.
                 </p>
-                <button className="mt-6 border border-black px-6 py-2 text-black transition-colors hover:bg-black hover:text-white">
-                    Learn More
-                </button>
+                <a href="/heritage">
+                    <button className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                        hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
+                                        text-sm tracking-widest"
+                    >
+                        LEARN MORE
+                    </button>                
+                </a>
+
             </div>
 
             

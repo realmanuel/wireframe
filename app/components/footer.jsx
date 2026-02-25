@@ -9,7 +9,7 @@ export default function Footer(){
         ["Privacy Policy", "/privacy-policy"],
         ["Refund Policy", "/refund-policy"],
         ["Shipping Policy", "/shipping-policy"],
-        ["Terms of Service", "/terms-of-service"],
+        ["Terms of Service", "/terms-and-conditions"],
     ];
     return(
         <footer className="bg-white w-full border-t-2 border-black overflow-x-hidden">
@@ -20,38 +20,39 @@ export default function Footer(){
                             <input className="flex-1 w-full px-3 py-3 border text-sm" 
                                     placeholder="Your Email"
                             />
-                            <button className="px-4 py-3 bg-grey-300 border-2 text-black font-medium hover:bg-black hover:text-white transition w-full sm:w-auto">
+                            <button className="px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                                hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
+                                                "
+                            >
                                 SUBMIT
                             </button>
                         </div>
                 </div>
 
-            <div className="mb-9">
-                <h3 className="font-semibold mb-9">LEGAL</h3>
-                <div className="space-y-6">
-                    <nav className="text-sm">
-                        {links.map(([name, href]) => (
-                        <div key={name}>
-                            <Link
-                                href={href}
-                                className="text-sm"
-                            >
-                                <p className="hover:border hover:border-black hover:border-b p-2">{name}</p>
-                            </Link>
-                    </div>
+                <div>
+                <h3 className="font-semibold mb-9 ">LEGAL</h3>
+
+                <nav className="space-y-6">
+                    {links.map(([name, href]) => (
+                    <Link
+                        key={name}
+                        href={href}
+                        className="block lg:text-xl p-2 hover:border hover:border-b-3"
+                    >
+                        {name}
+                    </Link>
                     ))}
-                    </nav>
+                </nav>
                 </div>
-            </div>
 
                 <div>
                     <h3 className="font-semibold mb-9">CONNECT</h3>
                     <div className="space-y-6">
                         <a href="tel:+2349037198414" className="block hover:border hover:border-black">
-                            <p className="text-sm p-2 hover:border-b">+234 903 719 8414</p>
+                            <p className="lg:text-xl p-2 hover:border-b">+234 903 719 8414</p>
                         </a>
                         <a href="mailto:ask@ituenbasi.com" className="block hover:border hover:border-black">
-                            <p className="text-sm p-2 hover:border-b">ask@ituenbasi.com</p>
+                            <p className="lg:text-xl p-2 hover:border-b-3">ask@ituenbasi.com</p>
                         </a>
                     </div>
                 </div>
