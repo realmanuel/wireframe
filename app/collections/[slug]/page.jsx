@@ -10,7 +10,7 @@
     },
     "dear-george": {
         name: "DEAR GEORGE",
-        description: "Liberation redefined. Who is George? Perhaps it's you.",
+        description: "A statement piece that bridges tradition and contemporary design. Crafted with attention to detail and waste-conscious making.",
         price: "₦95,000",
         image: "/c1.jpg",
     },
@@ -51,10 +51,10 @@
 
     return (
         <div className="bg-white min-h-screen text-black px-6 py-16">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        <div className="w-full m-5 md:grid-cols-2 items-start flex flex-row gap-5">
 
             {/* LEFT IMAGE */}
-            <div className="relative w-full aspect-square bg-gray-100">
+            <div className="relative w-3/5 aspect-2/5 bg-gray-100 flex m-2">
             <Image
                 src={collection.image}
                 alt={collection.name}
@@ -64,27 +64,29 @@
             </div>
 
             {/* RIGHT INFO */}
-            <div>
-            <h1 className="text-3xl md:text-4xl font-semibold tracking-wide mb-4">
+            <div className="m-2">
+            <h1 className="text-xl tracking-wide mb-8">
                 {collection.name}
             </h1>
 
-            <p className="text-lg mb-6">
+            <p className="text-xl mb-6 text-bold">
                 {collection.price}
             </p>
 
-            <p className="text-sm leading-relaxed mb-8">
-                {collection.description}
-            </p>
+
+                <p className="text-[10px] italic mb-10 max-w-xs">
+                    {collection.description}
+                </p><hr className="mb-10"/>
+
 
             {/* SIZE */}
-            <div className="mb-6">
-                <p className="text-sm mb-2">Size</p>
-                <div className="flex gap-3">
-                {["S", "M", "L", "XL"].map((size) => (
+            <div className="mb-6 max-w-xs">
+                <p className="text-[10px] mb-2">SIZE</p>
+                <div className="flex flex-wrap gap-2">
+                {["2XS", "XS", "S", "M", "L", "XL", "2XL", "3XL"].map((size) => (
                     <button
                     key={size}
-                    className="border border-black px-4 py-2 text-sm hover:bg-black hover:text-white transition"
+                    className="border border-black px-2 py-1 text-[10px] hover:bg-black hover:text-white transition"
                     >
                     {size}
                     </button>
@@ -92,15 +94,21 @@
                 </div>
             </div>
 
+            {/**COLOURS */}
+            <div className="mb-6 max-w-xs">
+                <div className="flex flex-wrap gap-2">
+                <button className="w-10 h-10 bg-black rounded-full shadow-lg border border-black hover:border-2 hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1"></button>
+                <button className="w-10 h-10 bg-blue-700 rounded-full shadow-lg border border-black hover:border-2 hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1"></button>
+                <button className="w-10 h-10 bg-amber-200 rounded-full shadow-lg border border-black hover:border-2 hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1"></button>
+                </div>
+            </div>
+
             {/* BUTTONS */}
             <div className="flex gap-4">
-                <button className="bg-black text-white px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">
+                <button className="bg-black text-white px-6 py-3 text-sm tracking-wide hover:bg-yellow-300  transition">
                 ADD TO CART
                 </button>
 
-                <button className="border border-black px-6 py-3 text-sm tracking-wide hover:bg-black hover:text-white transition">
-                ADD TO WISHLIST
-                </button>
             </div>
 
             </div>

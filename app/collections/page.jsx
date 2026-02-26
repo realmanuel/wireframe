@@ -30,8 +30,7 @@ export default function Collections() {
                                     src={collection.img}
                                     alt={collection.name}
                                     fill
-                                    className="object-cover "
-                                />
+                                />                               
                             </div>
                             <div className="p-4 h-32">
                                 <h2 className="text-lg font-semibold tracking-wide text-black">{collection.name}</h2>
