@@ -107,14 +107,14 @@ export default function Contact() {
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-semibold">TELEPHONE</p>
+                <p className="text-xl mb-7 font-semibold">EMAIL</p>
                 <a href="mailto:ask@ituenbasi.com">
                     <p>ask@ituenbasi.com</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-semibold">TELEPHONE</p>
+                <p className="text-xl mb-7 font-semibold">INSTAGRAM</p>
                 <a href="https://www.instagram.com/ituenbasi">
                     <p className="underline">@ituenbasi</p>
                 </a>
