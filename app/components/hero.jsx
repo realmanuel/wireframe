@@ -31,9 +31,9 @@ export default function Hero(){
                 </Link>
                 <Link 
                     href="/heritage"
-                    className="w-fit md:w-auto text-left px-8 py-4 transition-all font-medium border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
-                                                            hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
-                                                            text-sm tracking-widest"
+                    className="w-fit md:w-auto text-left px-8 py-4 transition-all font-medium hover:border hover:border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                                            hover:ring-2  bg-white text-black 
+                                                            text-sm tracking-widest underline"
                 >
                     EXPLORE HERITAGE
                 </Link>

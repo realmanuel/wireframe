@@ -5,12 +5,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 
     const relatedproducts = [
-    {id:1, name: "NKOYO", description:"A mother's story. Waste-not philosophy woven into every thread.", slug: "nkoyo", img: "/c1.jpg"},
-    {id:2, name: "DEAR GEORGE", description:"Liberation redefined. Who is George? perhaps it's you.", slug: "dear-george", img: "/c1.jpg"},
-    {id:3, name: "KITH AND KIN", description:"A labour of love. A reflection of Nigeria, of us.", slug: "kith-and-kin", img: "/c1.jpg"},
-    {id:4, name: "EKEMINI", description:"Contemporary elegance meets traditional craft.", slug: "ekemini", img: "/c1.jpg"},
-    {id:5, name: "BALOGUN", description:"Strength and grace. A celebration of character.", slug: "balogun", img: "/c1.jpg"},
-    {id:6, name: "ICONIC PIECES", description:"Signature designs. Timeless statements.", slug: "iconic-pieces", img: "/c1.jpg"},
+    {id:1, name: "NKOYO", price:"₦85,000", slug: "nkoyo", img: "/c1.jpg"},
+    {id:2, name: "DEAR GEORGE", price:"₦95,000",  slug: "dear-george", img: "/c1.jpg"},
+    {id:3, name: "KITH AND KIN", price:"₦90,000", slug: "kith-and-kin", img: "/c1.jpg"},
+    {id:4, name: "EKEMINI", price:"₦110,000", slug: "ekemini", img: "/c1.jpg"},
+    {id:5, name: "BALOGUN", price:"₦120,000", slug: "balogun", img: "/c1.jpg"},
+    {id:6, name: "ICONIC PIECES", price:"₦150,000", slug: "iconic-pieces", img: "/c1.jpg"},
 ]
 
     const collections = {
@@ -57,7 +57,7 @@ export default function CollectionPage({ params }) {
     const [quantity, setQuantity] = useState(1);
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
-    const thumbnailImages = Array(6).fill("/c1.jpg");
+    const thumbnailImages = ["/c1.jpg", "/c2.jpg", "/c1.jpg", "/c2.jpg", "/c1.jpg", "/c2.jpg"];
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const canAddToCart = Boolean(selectedSize && selectedColor);
     const filteredRelatedProducts = relatedproducts.filter(
@@ -71,11 +71,11 @@ export default function CollectionPage({ params }) {
     }
 
     return (
-        <div className="bg-white min-h-screen text-black px-6 py-16">
-        <div className="w-full m-5 md:grid-cols-2 items-start flex flex-row gap-5">
+        <div className="bg-white min-h-screen text-black px-4 sm:px-6 lg:px-10 py-10 sm:py-16 mt-15">
+        <div className="w-full max-w-7xl mx-auto items-start flex flex-col lg:flex-row gap-6 lg:gap-8">
 
             {/* LEFT IMAGE */}
-            <div className="w-2/4 bg-gray-100 flex flex-col m-2">
+            <div className="w-full lg:w-1/2 bg-gray-100 flex flex-col">
                 <div className="relative w-full aspect-square">
                     <Image
                         src={thumbnailImages[selectedImageIndex]}
@@ -110,7 +110,7 @@ export default function CollectionPage({ params }) {
 
 
             {/* RIGHT INFO */}
-            <div className="m-2 relative w-2/4">
+            <div className="relative w-full lg:w-1/2">
             <h1 className="text-xl tracking-wide mb-8">
                 {collection.name}
             </h1>
@@ -227,9 +227,9 @@ export default function CollectionPage({ params }) {
             
             </div>
         </div>
-        <div>
+        <div className="w-full max-w-7xl mx-auto mt-10">
             <div>
-                <p className="text-center font-semibold ">RELATED PRODUCTS</p>
+                <p className="text-center font-semibold text-3xl m-10 tracking-widest">RELATED PRODUCTS</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredRelatedProducts.map((product)=>(
@@ -243,8 +243,8 @@ export default function CollectionPage({ params }) {
                                 />                               
                             </div>
                             <div className="p-4 h-32">
-                                <h2 className="text-lg font-semibold tracking-wide text-black">{collection.name}</h2>
-                                <p className="mt-2 text-sm text-black">{collection.description}</p>
+                                <h2 className="text-lg font-semibold tracking-wide text-black">{product.name}</h2>
+                                <p className="mt-2 text-sm text-black">{product.price}</p>
                             </div>
                         </div>
                     </Link>
