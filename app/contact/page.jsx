@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image"
 export default function Contact() {
     return (
         //FIRST SECTION
@@ -123,6 +123,29 @@ export default function Contact() {
                 </a>
             </span>
         </div>
+        </div>
+        {/**CONSULTATION */}
+        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto border border-black mt-10 overflow-hidden">
+            <div className="w-full lg:w-1/2 p-8">
+                <div className="relative h-64 sm:h-80 md:h-96">
+                    <Image 
+                        src={"/c1.jpg"}
+                        alt="book-consultation"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            </div>
+            <div className="w-full lg:w-1/2 p-8 sm:p-6">
+                <h2 className="font-semibold mb-4 mt-4 text-2xl tracking-widest">BOOK A CONSULTATION</h2>
+                <p>Schedule a personalized consultation with our team. We'll help you find the perfect pieces and answer any questions you may have.</p>
+                <button className="mt-3 px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                    hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
+                                    text-sm tracking-widest"
+                >
+                    BOOK NOW
+                </button>
+            </div>
         </div>
         </div>
     );

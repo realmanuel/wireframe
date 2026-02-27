@@ -32,7 +32,7 @@ export default function ProductCard({ product, onQuickAdd }) {
                     />
                     <button
                         onClick={() => { onQuickAdd(product); }}
-                        className="absolute bottom-0 left-0 right-0 justify-around bg-black text-white py-2 px-4 text-sm opacity-0 translate-y-full transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 hover:bg-yellow-400"
+                        className="absolute bottom-0 left-0 right-0 justify-around bg-black text-white py-2 px-4 text-sm opacity-100 translate-y-0 md:opacity-0 md:translate-y-full transition-all duration-300 ease-out md:group-hover:opacity-100 md:group-hover:translate-y-0 hover:bg-yellow-400"
                     >
                         Quick Add
                     </button>
