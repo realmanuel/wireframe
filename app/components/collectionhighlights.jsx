@@ -30,7 +30,7 @@ export default function CollectionHighlights() {
     return (
         <section className="w-full py-12 sm:py-16 bg-white text-center border-b border-black overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <h1 className="text-5xl font-semibold text-black pb-3">Collection Highlights</h1>
+                <h1 className="text-3xl md:text-4xl font-semibold text-black pb-3 tracking-widest">COLLECTION HIGHLIGHTS</h1>
                 <p className="mt-4 text-gray-600">
                 </p>
 

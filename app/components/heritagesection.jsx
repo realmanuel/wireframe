@@ -6,7 +6,7 @@ export default function HeritageSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
             
             <div className="max-w-2xl text-left">
-                <h2 className="text-3xl font-semibold text-black uppercase tracking-wide">Our Heritage</h2>
+                <h2 className="text-3xl font-semibold text-black uppercase tracking-widest">Our Heritage</h2>
                 <p className="mt-4 text-black leading-relaxed">
                     Our heritage is not nostalgia. It is a living language. We draw from culture, arts, and the rich tapestry of Nigerian tradition, reinterpreting Ankara with contemporary vision. Every piece is crafted with artisanal attention to detail, waste-conscious making, and a commitment to timeless elegance over trend-following.
                 </p>
