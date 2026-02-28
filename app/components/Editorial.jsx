@@ -1,4 +1,5 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link" 
 
 export default function Editorial() {
     return (
@@ -14,12 +15,13 @@ export default function Editorial() {
                 Discover our latest editorial collection
             </h2>
             
-            <button className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+            <Link href="/lookbook" className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                 hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                 text-sm tracking-widest"
             >
                 VIEW LOOKBOOK
-            </button>
+            </Link>
+
         </section>
     );
 }

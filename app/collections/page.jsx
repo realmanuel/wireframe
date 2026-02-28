@@ -21,7 +21,7 @@ export default function Collections() {
             <p className="text-black text-center mb-12">From the waste-not philosophy of Nkoyo to the liberating question of Dear George, our collections are conversations with culture, heritage, and individuality.</p>
             {/**Collection grid */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
                 {collections.map((collection)=>(
                     <Link key={collection.id} href={`/collections/${collection.slug}`} className="text-black block h-full">
                         <div className="bg-white border border-black overflow-hidden shadow-sm hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1 flex flex-col">

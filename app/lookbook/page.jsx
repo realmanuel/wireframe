@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import Image from "next/image";
 
     const books = [
@@ -30,12 +31,12 @@ import Image from "next/image";
                                 <div className="mt-4">
                                     <h2 className="text-sm italic text-black text-center">{book.title}</h2>
                                     <div className="mt-3 flex justify-center">
-                                        <button className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                                        <Link href="./shop" className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                                             hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                                             text-sm tracking-widest"
                                         >
                                             VIEW LOOKBOOK
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

@@ -24,7 +24,7 @@ export default function Footer(){
                                                 hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                                 "
                             >
-                                SUBMIT
+                                SUBSCRIBE
                             </button>
                         </div>
                 </div>

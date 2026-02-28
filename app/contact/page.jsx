@@ -1,5 +1,81 @@
 "use client";
 import Image from "next/image"
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link"
+
+    const SimpleSelectBox = () => {
+    const options = [
+        { value: "option1", label: "General Inquiries" },
+        { value: "option2", label: "Order & Shipping" },
+        { value: "option3", label: "Press & Media" },
+    ];
+    const [selectedValue, setSelectedValue] = useState(options[0].value);
+    const [open, setOpen] = useState(false);
+    const wrapperRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+                setOpen(false);
+            }
+        };
+        const handleEscape = (event) => {
+            if (event.key === "Escape") setOpen(false);
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("keydown", handleEscape);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, []);
+
+    const selectedLabel =
+        options.find((option) => option.value === selectedValue)?.label || "Select";
+
+    return (
+        <div ref={wrapperRef} className="relative w-full min-w-0">
+            <button
+            type="button"
+            onClick={() => setOpen((prev) => !prev)}
+            className="w-full min-w-0 border border-black bg-white px-3 py-2 text-left text-sm flex items-center justify-between"
+            aria-haspopup="listbox"
+            aria-expanded={open}
+            >
+            <span className="truncate">{selectedLabel}</span>
+            <span className={`ml-3 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}>
+                v
+            </span>
+            </button>
+
+            {open && (
+            <ul
+                className="absolute left-0 top-full z-20 mt-1 w-full min-w-0 border border-black bg-white shadow-sm"
+                role="listbox"
+            >
+                {options.map((option) => (
+                <li key={option.value}>
+                    <button
+                    type="button"
+                    className="w-full px-3 py-2 text-left text-sm hover:bg-black hover:text-white transition-colors"
+                    onClick={() => {
+                        setSelectedValue(option.value);
+                        setOpen(false);
+                    }}
+                    role="option"
+                    aria-selected={selectedValue === option.value}
+                    >
+                    {option.label}
+                    </button>
+                </li>
+                ))}
+            </ul>
+            )}
+        </div>
+    );
+    };
+
 export default function Contact() {
     return (
         //FIRST SECTION
@@ -22,8 +98,8 @@ export default function Contact() {
 
             {/* Name */}
             <div>
-                <label className="block text-sm font-semibold mb-1">
-                Name
+                <label className="block text-sm  mb-1 tracking-wider">
+                NAME
                 </label>
                 <input
                 type="text"
@@ -35,8 +111,8 @@ export default function Contact() {
 
             {/* Email */}
             <div>
-                <label className="block text-sm font-semibold mb-1">
-                Email
+                <label className="block text-sm  mb-1">
+                EMAIL
                 </label>
                 <input
                 type="email"
@@ -48,20 +124,29 @@ export default function Contact() {
 
             {/* Subject */}
             <div>
-                <label className="block text-sm font-semibold mb-1">
-                Subject
+                <label className="block text-sm  mb-1 tracking-wider">
+                SUBJECT
                 </label>
                 <input
                 type="text"
                 placeholder="Subject"
                 className="w-full border px-4 py-2"
+                required
                 />
+            </div>
+
+            {/* Inquiry */}
+            <div>
+                <label className="block text-sm  mb-1 tracking-wider">
+                INQUIRY TYPE
+                </label>
+                <SimpleSelectBox />
             </div>
 
             {/* Message */}
             <div>
-                <label className="block text-sm font-semibold mb-1">
-                Message
+                <label className="block text-sm  mb-1 tracking-wider">
+                MESSAGE
                 </label>
                 <textarea
                 rows="5"
@@ -70,6 +155,8 @@ export default function Contact() {
                 required
                 ></textarea>
             </div>
+
+
 
                 <button className="mt-3 px-4 py-2 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
@@ -139,12 +226,12 @@ export default function Contact() {
             <div className="w-full lg:w-1/2 p-8 sm:p-6">
                 <h2 className="font-semibold mb-4 mt-4 text-2xl tracking-widest">BOOK A CONSULTATION</h2>
                 <p>Schedule a personalized consultation with our team. We'll help you find the perfect pieces and answer any questions you may have.</p>
-                <button className="mt-3 px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                <Link href="https://calendly.com/ituebasi-consultation" className="mt-3 px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                     text-sm tracking-widest"
                 >
                     BOOK NOW
-                </button>
+                </Link>
             </div>
         </div>
         </div>
