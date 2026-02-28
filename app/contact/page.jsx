@@ -188,7 +188,7 @@ export default function Contact() {
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
                 <p className="text-xl mb-7 font-semibold">TELEPHONE</p>
-                <a href="tel:+2349037198414">
+                <a target="_blank" rel="noopener noreferrer" href="tel:+2349037198414">
                     <p>+234 903 719 8414</p>
                 </a>
             </span>
@@ -202,10 +202,10 @@ export default function Contact() {
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
                 <p className="text-xl mb-7 font-semibold">INSTAGRAM</p>
-                <a href="https://www.instagram.com/ituenbasi">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ituenbasi">
                     <p className="underline">@ituenbasi</p>
                 </a>
-                <a href="https://www.instagram.com/ituenbasiworld/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ituenbasiworld/">
                     <p className="underline">@ituenbasiworld</p>
                 </a>
             </span>
@@ -226,7 +226,7 @@ export default function Contact() {
             <div className="w-full lg:w-1/2 p-8 sm:p-6">
                 <h2 className="font-semibold mb-4 mt-4 text-2xl tracking-widest">BOOK A CONSULTATION</h2>
                 <p>Schedule a personalized consultation with our team. We'll help you find the perfect pieces and answer any questions you may have.</p>
-                <Link href="https://calendly.com/ituebasi-consultation" className="mt-3 px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                <Link target="_blank" rel="noopener noreferrer"  href="https://calendly.com/ituebasi-consultation" className="mt-4 inline-block w-fit px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                     text-sm tracking-widest"
                 >

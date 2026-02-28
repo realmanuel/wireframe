@@ -35,6 +35,7 @@ export default function Footer(){
                 <nav className="space-y-6">
                     {links.map(([name, href]) => (
                     <Link
+                        target="_blank" rel="noopener noreferrer"
                         key={name}
                         href={href}
                         className="block lg:text-xl p-2 hover:border hover:border-b-3"
@@ -48,10 +49,10 @@ export default function Footer(){
                 <div>
                     <h3 className="font-semibold mb-9">CONNECT</h3>
                     <div className="space-y-6">
-                        <a href="tel:+2349037198414" className="block hover:border hover:border-black">
+                        <a target href="tel:+2349037198414" className="block hover:border hover:border-black">
                             <p className="lg:text-xl p-2 hover:border-b">+234 903 719 8414</p>
                         </a>
-                        <a href="mailto:ask@ituenbasi.com" className="block hover:border hover:border-black">
+                        <a target href="mailto:ask@ituenbasi.com" className="block hover:border hover:border-black">
                             <p className="lg:text-xl p-2 hover:border-b-3">ask@ituenbasi.com</p>
                         </a>
                     </div>
@@ -71,7 +72,7 @@ export default function Footer(){
             </svg>
             </a>
             
-            <a href="https://www.instagram.com/ituenbasiworld/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded hover:border-2 hover:border-yellow-400 transition">
+            <a target href="https://www.instagram.com/ituenbasiworld/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded hover:border-2 hover:border-yellow-400 transition">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <rect x="3" y="3" width="18" height="18" rx="4" ry="4" strokeWidth="1.5" />
             <circle cx="12" cy="12" r="3.2" strokeWidth="1.5" />
