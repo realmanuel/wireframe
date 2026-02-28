@@ -4,6 +4,7 @@
     import Link from "next/link";
     import { useStore } from "../../context/storeContext";
     import CartSidebar from "./CartSidebar";    
+    import Image from "next/image"
 
     import {
     MagnifyingGlassIcon,
@@ -54,15 +55,16 @@
         {/* ================= HEADER ================= */}
         <header
             className={`
-            fixed top-0 left-0 w-full z-50
+            fixed top-0 left-0 w-full z-20
             transition-all duration-300 
             ${scrolled ? "bg-white shadow-sm" : "bg-white"}
             `}
         >
             <div
             className="
+                relative
                 max-w-7xl mx-auto
-                px-4 sm:px-6 lg:px-10
+                px-4 sm:px-6 lg:px-2 lg:py-10
                 h-12 sm:h-14
                 flex items-center justify-between
             "
@@ -80,12 +82,39 @@
                 ))}
             </nav>
 
+
+            <button
+                className="lg:hidden fixed z-[60] left-1/2 -translate-x-1/2 h-9 w-9 sm:h-10 sm:w-10 hover:opacity-60 transition-opacity p-1  rounded hover:border-2 hover:border-yellow-400"
+                onClick={() => setMenuOpen((prev) => !prev)}
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+            >
+                <Bars3Icon
+                    className={`
+                        absolute inset-0 m-auto h-7 w-7 sm:h-10 z-100 sm:w-10 stroke-black
+                        transition-all duration-300
+                        ${menuOpen ? "opacity-0 rotate-90 scale-75" : "opacity-100 rotate-0 scale-100"}
+                    `}
+                />
+                <XMarkIcon
+                    className={`
+                        absolute inset-0 m-auto h-7 w-7 sm:h-10 sm:w-10 z-100 stroke-black
+                        transition-all duration-300
+                        ${menuOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-75"}
+                    `}
+                />
+            </button>
+
+
+
             {/* Icons */}
+            
             <div className="flex items-center gap-2 sm:gap-4 stroke-black relative">
+                
                 {/* SEARCH */}
                 <MagnifyingGlassIcon
                 className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400"
                 onClick={() => setSearchOpen(true)}
+                
                 />
                 <UserIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
                 <div className="relative">
@@ -106,13 +135,7 @@
                     )}
                 </button>
 
-                {/* Mobile menu button */}
-                <button
-                    className="lg:hidden hover:opacity-60 transition-opacity p-1 sm:p-2 rounded hover:border-2 hover:border-yellow-400"
-                    onClick={() => setMenuOpen(true)}
-                >
-                    <Bars3Icon className="h-7 w-7 sm:h-10 sm:w-10 stroke-black" />
-                </button>
+
             </div>
             </div>
 
@@ -123,15 +146,15 @@
                 ${searchOpen ? "max-h-24 py-4" : "max-h-0"}
             `}
             >
-            <div className="max-w-7xl mx-auto px-6 flex gap-3">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center gap-2 sm:gap-3">
                 <input
                 autoFocus
                 type="text"
                 placeholder="Search products..."
-                className="flex-1 border px-4 py-2"
+                className="flex-1 min-w-0 border px-3 sm:px-4 py-2"
                 />
 
-                <button onClick={() => setSearchOpen(false)} className="p-1 rounded hover:border-2 hover:border-yellow-400 transition cursor-pointer">
+                <button onClick={() => setSearchOpen(false)} className="shrink-0 p-1 rounded hover:border-2 hover:border-yellow-400 transition cursor-pointer">
                 <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
                 </button>
             </div>
@@ -152,20 +175,12 @@
         {/* Side menu */}
         <aside
             className={`
-            fixed top-0 right-0 h-full w-64 sm:w-72 bg-white z-50 text-black
-            transform transition-transform duration-300
+            fixed top-0 right-0 h-full w-43 sm:w-55 bg-white z-50 text-black
+            transform transition-transform duration-300 delay-75
             ${menuOpen ? "translate-x-0" : "translate-x-full"}
             `}
         >
-            <div className="p-6 flex flex-col gap-10 relative">
-                <button
-                    type="button"
-                    className="mb-6 hover:opacity-60 transition-opacity cursor-pointer p-1 rounded hover:border-2 absolute right-0 hover:border-yellow-400"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
-                </button>
-
+            <div className="p-6 flex flex-col gap-6 relative">
                 <nav className="text-sm space-y-4">
                     {links.map(([name, href]) => (
                     <div key={name}>
