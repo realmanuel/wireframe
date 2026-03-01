@@ -83,7 +83,7 @@ export default function Contact() {
 
         {/* Title */}
         <div className="text-center max-w-xl mx-auto px-6 mb-8">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-12 mb-12 text-black tracking-wides">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-center mt-12 mb-12 text-black tracking-wides">
             CONTACT US
             </h1>
             <p className="text-base text-gray-800">
@@ -170,7 +170,7 @@ export default function Contact() {
 
         {/**ADDRESS */}
         <div className="flex-1 border border-black bg-white p-8">
-            <h2 className="text-2xl font-bold tracking-widest mb-8 mt-8">STORE ADDRESS</h2>
+            <h2 className="text-2xl font-normal tracking-widest mb-8 mt-8">STORE ADDRESS</h2>
             
             <span className="mb-8 mt-8 space-y-0.5">
                 <p>ITUEN BASI STORE</p>
@@ -181,27 +181,27 @@ export default function Contact() {
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-semibold">OPENING HOURS</p>
+                <p className="text-xl mb-7 font-normal">OPENING HOURS</p>
                 <p>9am - 6pm WAT</p>
                 <p>Tuesdays to Saturdays</p>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-semibold">TELEPHONE</p>
+                <p className="text-xl mb-7 font-normal">TELEPHONE</p>
                 <a target="_blank" rel="noopener noreferrer" href="tel:+2349037198414">
                     <p>+234 903 719 8414</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-semibold">EMAIL</p>
+                <p className="text-xl mb-7 font-normal">EMAIL</p>
                 <a href="mailto:ask@ituenbasi.com">
                     <p>ask@ituenbasi.com</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-semibold">INSTAGRAM</p>
+                <p className="text-xl mb-7 font-normal">INSTAGRAM</p>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ituenbasi">
                     <p className="underline">@ituenbasi</p>
                 </a>
@@ -224,7 +224,7 @@ export default function Contact() {
                 </div>
             </div>
             <div className="w-full lg:w-1/2 p-8 sm:p-6">
-                <h2 className="font-semibold mb-4 mt-4 text-2xl tracking-widest">BOOK A CONSULTATION</h2>
+                <h2 className="font-normal mb-4 mt-4 text-2xl tracking-widest">BOOK A CONSULTATION</h2>
                 <p>Schedule a personalized consultation with our team. We'll help you find the perfect pieces and answer any questions you may have.</p>
                 <Link target="_blank" rel="noopener noreferrer"  href="https://calendly.com/ituebasi-consultation" className="mt-4 inline-block w-fit px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
@@ -237,3 +237,6 @@ export default function Contact() {
         </div>
     );
 }
+
+
+

@@ -100,7 +100,7 @@ const selectedVariant = useMemo(() => {
             {/* RIGHT — DETAILS */}
             <div>
 
-            <h1 className="text-3xl font-semibold mb-4">
+            <h1 className="text-3xl font-normal mb-4">
                 {product.name}
             </h1>
 
@@ -191,7 +191,7 @@ const selectedVariant = useMemo(() => {
 
             {/* DESCRIPTION */}
             <div className="mt-12">
-                <h3 className="font-semibold mb-3">
+                <h3 className="font-normal mb-3">
                 Description
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -204,3 +204,4 @@ const selectedVariant = useMemo(() => {
         </div>
     );
 }
+

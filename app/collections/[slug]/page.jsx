@@ -229,7 +229,7 @@ export default function CollectionPage({ params }) {
         </div>
         <div className="w-full max-w-7xl mx-auto mt-10">
             <div>
-                <p className="text-center font-semibold text-3xl m-10 tracking-widest">RELATED PRODUCTS</p>
+                <p className="text-center font-normal text-3xl m-10 tracking-widest">RELATED PRODUCTS</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredRelatedProducts.map((product)=>(
@@ -243,7 +243,7 @@ export default function CollectionPage({ params }) {
                                 />                               
                             </div>
                             <div className="p-4 h-32">
-                                <h2 className="text-lg font-semibold tracking-wide text-black">{product.name}</h2>
+                                <h2 className="text-lg font-normal tracking-wide text-black">{product.name}</h2>
                                 <p className="mt-2 text-sm text-black">{product.price}</p>
                             </div>
                         </div>
@@ -255,3 +255,5 @@ export default function CollectionPage({ params }) {
         </div>
     );
 }
+
+

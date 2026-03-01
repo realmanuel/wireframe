@@ -8,7 +8,7 @@ export default function RefundPolicy() {
             We want you to be completely satisfied with your purchase.
         </p> 
 
-        <h3 className="font-semibold text-xl text-start mt-11">ELIGIBILITY</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">ELIGIBILITY</h3><hr />
         <p className="m-3 text-sm">
             • Refunds available for items returned within 14 days of delivery
         </p>
@@ -22,7 +22,7 @@ export default function RefundPolicy() {
             • Sale items may have different return policies as indicated
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">REFUND PROCESS</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">REFUND PROCESS</h3><hr />
         <p className="m-3 text-sm">
             • Contact us to initiate a return and receive authorization
         </p>
@@ -36,7 +36,7 @@ export default function RefundPolicy() {
             • Refunds are issued to the original payment method
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">REFUND TIMELINE</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">REFUND TIMELINE</h3><hr />
         <p className="m-3 text-sm">
             • Refunds processed within 5-7 business days of receiving returned items
         </p>
@@ -51,3 +51,4 @@ export default function RefundPolicy() {
         </PolicyLayout>
     );
 }
+

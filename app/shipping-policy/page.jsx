@@ -8,7 +8,7 @@ export default function ShippingPolicy() {
             We want you to be completely satisfied with your purchase.
         </p> 
 
-        <h3 className="font-semibold text-xl text-start mt-11">NIGERIA DELIVERY</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">NIGERIA DELIVERY</h3><hr />
         <p className="m-3 text-sm">
             • Standard delivery: 3-5 business days
         </p>
@@ -19,7 +19,7 @@ export default function ShippingPolicy() {
             • Free shipping on orders over ₦50,000
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">INTERNATIONAL DELIVERY</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">INTERNATIONAL DELIVERY</h3><hr />
         <p className="m-3 text-sm">
             • Standard delivery: 7-14 business days
         </p>
@@ -30,7 +30,7 @@ export default function ShippingPolicy() {
             • Duties and taxes may apply and are the customer's responsibility
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">TRACKING</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">TRACKING</h3><hr />
         <p className="m-3 text-sm">
             • You will receive a tracking number via email once your order ships
         </p>
@@ -41,3 +41,4 @@ export default function ShippingPolicy() {
         </PolicyLayout>
     );
 }
+

@@ -20,8 +20,8 @@ return (
             />
             </div>
 
-            <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-            <p className="text-gray-600 mb-4">{product.price}</p>
+            <h2 className="text-xl font-normal mb-2">{product.name}</h2>
+            <p className="text-black mb-4">{product.price}</p>
             <button className="w-full bg-black text-white px-4 py-2">
             Add to Cart
             </button>
@@ -29,3 +29,5 @@ return (
         </div>
 );
 }
+
+

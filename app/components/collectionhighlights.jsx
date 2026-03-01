@@ -30,7 +30,7 @@ export default function CollectionHighlights() {
     return (
         <section className="w-full py-12 sm:py-16 bg-white text-center border-b border-black overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <h1 className="text-3xl md:text-4xl font-semibold text-black pb-3 tracking-widest">COLLECTION HIGHLIGHTS</h1>
+                <h1 className="text-3xl md:text-4xl font-normal text-black pb-3 tracking-widest">COLLECTION HIGHLIGHTS</h1>
                 <p className="mt-4 text-gray-600">
                 </p>
 
@@ -50,10 +50,10 @@ export default function CollectionHighlights() {
                                         />
                                     </div>
                                     <div className="p-4 h-32 text-left">
-                                        <h3 className="text-lg font-semibold tracking-wide text-black">
+                                        <h3 className="text-lg  tracking-wide text-black">
                                             {collection.name}
                                         </h3>
-                                        <p className="mt-2 text-sm text-black">
+                                        <p className="mt-2 text-[12px] italic text-black">
                                             {collection.description}
                                         </p>
                                     </div>
@@ -65,3 +65,5 @@ export default function CollectionHighlights() {
         </section>
     );
 }
+
+

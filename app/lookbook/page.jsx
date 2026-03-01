@@ -14,7 +14,7 @@ import Image from "next/image";
         return(
             <div className="max-w-full mx-auto px-6 py-16 bg-white">
                 {/**Page Title */}
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-12 mb-12 text-black tracking-widest">LOOKBOOK</h1>
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-center mt-12 mb-12 text-black tracking-widest">LOOKBOOK</h1>
                 
                 {/**Lookbook grid */}
                 <div className="grid grid-cols-1 gap-6">
@@ -47,3 +47,5 @@ import Image from "next/image";
 
         )
     }
+
+

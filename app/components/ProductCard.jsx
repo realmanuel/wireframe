@@ -39,7 +39,7 @@ export default function ProductCard({ product, onQuickAdd }) {
                 </div>
 
                 <div className="mt-3 text-center text-black">
-                    <h3 className="font-medium text-sm">{product.name}</h3>
+                    <h3 className="font-normal text-sm">{product.name}</h3>
                     <p className="text-black">{product.price}</p>
                 </div>
 
@@ -55,3 +55,4 @@ export default function ProductCard({ product, onQuickAdd }) {
         </div>
     );
 }
+

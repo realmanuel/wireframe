@@ -18,7 +18,7 @@ export default function GiftCards() {
 
         {/* Hero */}
         <div className="max-w-4xl mb-12 m-auto text-center">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center mt-12 mb-12 text-black tracking-widest">GIFT CARDS</h1>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-normal text-center mt-12 mb-12 text-black tracking-widest">GIFT CARDS</h1>
             <h2 className="text-sm sm:text-base md:text-lg mb-12 text-black">Give the gift of timeless elegance. Our gift cards are perfect for any occasion and never expire.</h2>
         </div>
 
@@ -32,7 +32,7 @@ export default function GiftCards() {
 
 
                 <div className="p-4 text-center m-5">
-                <h1 className="text-xl font-semibold text-black">{card.value}</h1>
+                <h1 className="text-xl font-normal text-black">{card.value}</h1>
                 <p className="text-sm text-black mt-2">{card.description}</p>
                 {card.id === 5 && (
                     <div className="mt-3">
@@ -59,7 +59,7 @@ export default function GiftCards() {
 
         {/* Call to Action */}
         <div className="max-w-4xl mx-auto px-6 py-12">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-10 text-center tracking-widest">GIFT CARD DETAILS</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal text-black mb-10 text-center tracking-widest">GIFT CARD DETAILS</h1>
             <p className="text-black text-base md:text-lg mb-2">
                 • Gift cards never expire
             </p>
@@ -80,3 +80,5 @@ export default function GiftCards() {
         </div>
     );
 }
+
+

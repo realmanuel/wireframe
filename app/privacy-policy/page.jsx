@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
             Your privacy is important to us. This policy explains how we collect, use, and protect your information.
         </p> 
 
-        <h3 className="font-semibold text-xl text-start mt-11">INFORMATION WE COLLECT</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">INFORMATION WE COLLECT</h3><hr />
         <p className="m-3 text-sm">
             • Name, email address, phone number, and shipping address
         </p>
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
             • Website usage data and analytics
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">HOW WE USE YOUR INFORMATION</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">HOW WE USE YOUR INFORMATION</h3><hr />
         <p className="m-3 text-sm">
             • To process and fulfill your orders
         </p>
@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             • To send marketing communications (with your consent)
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">DATA SECURITY</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">DATA SECURITY</h3><hr />
         <p className="m-3 text-sm">
             • We use industry-standard security measures to protect your information
         </p>
@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
             • We do not store full credit card details on our servers
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">YOUR RIGHTS</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">YOUR RIGHTS</h3><hr />
         <p className="m-3 text-sm">
             • You can request access to your personal information
         </p>
@@ -64,3 +64,4 @@ export default function PrivacyPolicy() {
         </PolicyLayout>
     );
 }
+

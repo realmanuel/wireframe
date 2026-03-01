@@ -8,7 +8,7 @@ export default function TermsOfService() {
             By using our website and making purchases, you agree to these terms and conditions.
         </p> 
 
-        <h3 className="font-semibold text-xl text-start mt-11">ORDERS</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">ORDERS</h3><hr />
         <p className="m-3 text-sm">
             • All orders are subject to product availability
         </p>
@@ -22,7 +22,7 @@ export default function TermsOfService() {
             • We are not responsible for typographical errors in pricing
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">PAYMENT</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">PAYMENT</h3><hr />
         <p className="m-3 text-sm">
             • Payment is required at the time of order
         </p>
@@ -36,7 +36,7 @@ export default function TermsOfService() {
             • International orders may be subject to currency conversion fees
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">INTELLECTUAL PROPERTY</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">INTELLECTUAL PROPERTY</h3><hr />
         <p className="m-3 text-sm">
             • All content on this website is the property of Ituen Basi
         </p>
@@ -47,7 +47,7 @@ export default function TermsOfService() {
             • Unauthorized use of our content is prohibited
         </p>
 
-        <h3 className="font-semibold text-xl text-start mt-11">LIMITATION OF LIABILITY</h3><hr />
+        <h3 className="font-normal text-xl text-start mt-11">LIMITATION OF LIABILITY</h3><hr />
         <p className="m-3 text-sm">
             • We are not liable for indirect or consequential damages
         </p>
@@ -61,3 +61,4 @@ export default function TermsOfService() {
         </PolicyLayout>
     );
 }
+

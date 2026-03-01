@@ -58,7 +58,7 @@
                 <X />
             </button>
 
-            <h2 className="text-lg font-semibold mb-1">
+            <h2 className="text-lg font-normal mb-1">
                 {product.name}
             </h2>
             {/*determine price to show based on selected variant or default to first variant price**/}
@@ -153,3 +153,4 @@
         </>
     );
     }
+
