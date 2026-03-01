@@ -1,24 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 import {useStore} from "../../context/storeContext";
 import {Heart} from "lucide-react";
-import QuickAddModal from "./QuickAddModal";
 
-export default function ProductCard({ product, onQuickAdd }) {
+export default function ProductCard({ product, onQuickAdd, productHref }) {
 
     const {addToCart, toggleWishlist, wishlist, setIsCartOpen} = useStore();
     // const {isWishlisted} = wishlist.find((item) => item.id === product.id) || {};
     const isWishlisted = wishlist.some((item) => item.id === product.id);
     return (
         <div className="px-1">
-            <div className="relative bg-white pb-3 transform transition-transform duration-200 ease-out hover:translate-y-1 hover:scale-105 active:-translate-y-1  border border-black gap-8 m-3">
+            <div className="relative bg-white pb-3 transform transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_10px_18px_-10px_rgba(0,0,0,0.55)] border border-black gap-8 m-3">
                 {/* Heart */}
                 <button
                     onClick={() => toggleWishlist(product)}
-                    className="absolute top-3 right-3 stroke-black z-10"
+                    className="p-3 absolute top-3 right-3 stroke-black z-10 bg-gray-300"
                 >
                     <Heart
                     size={20}
-                    className={isWishlisted ? "fill-black" : ""}
+                    className={ isWishlisted ? "fill-yellow-300" : ""}
                     />
                 </button>
                 <div className="group bg-gray-200 overflow-hidden aspect-square relative flex items-center justify-center">
@@ -39,7 +39,13 @@ export default function ProductCard({ product, onQuickAdd }) {
                 </div>
 
                 <div className="mt-3 text-center text-black">
-                    <h3 className="font-normal text-sm">{product.name}</h3>
+                    {productHref ? (
+                        <Link href={productHref} className="font-normal text-sm border-b border-transparent hover:border-black transition-colors">
+                            {product.name}
+                        </Link>
+                    ) : (
+                        <h3 className="font-normal text-sm">{product.name}</h3>
+                    )}
                     <p className="text-black">{product.price}</p>
                 </div>
 

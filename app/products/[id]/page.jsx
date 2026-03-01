@@ -6,53 +6,76 @@ import { notFound } from "next/navigation";
 
 
 const products = [
-    {id:1, name: "NKOYO", description:"A mother's story. Waste-not philosophy woven into every thread.", slug: "nkoyo", img: "/c1.jpg",
+    {id:1, name: "NKOYO", description:"A mother's story. Waste-not philosophy woven into every thread.", slug: "product-1", img: "/c1.jpg",
         variants: [
             { id: 101, size: "S", color: "Black", price: 15000 },
             { id: 102, size: "M", color: "Black", price: 15000 },
             { id: 103, size: "L", color: "Brown", price: 17000 },
         ],
     },
-    {id:2, name: "DEAR GEORGE", description:"Liberation redefined. Who is George? perhaps it's you.", slug: "dear-george", img: "/c1.jpg",
+    {id:2, name: "DEAR GEORGE", description:"Liberation redefined. Who is George? perhaps it's you.", slug: "product-2", img: "/c1.jpg",
         variants: [
             { id: 201, size: "S", color: "Black", price: 15000 },
             { id: 202, size: "M", color: "White", price: 15000 },
             { id: 203, size: "L", color: "Brown", price: 17000 },
         ],
     },
-    {id:3, name: "KITH AND KIN", description:"A labour of love. A reflection of Nigeria, of us.", slug: "kith-and-kin", img: "/c1.jpg",
+    {id:3, name: "KITH AND KIN", description:"A labour of love. A reflection of Nigeria, of us.", slug: "product-3", img: "/c1.jpg",
         variants: [
             { id: 301, size: "S", color: "Black", price: 15000 },
             { id: 302, size: "M", color: "White", price: 15000 },
             { id: 303, size: "L", color: "Brown", price: 17000 },
         ],
     },
-    {id:4, name: "EKEMINI", description:"Contemporary elegance meets traditional craft.", slug: "ekemini", img: "/c1.jpg",
+    {id:4, name: "EKEMINI", description:"Contemporary elegance meets traditional craft.", slug: "product-4", img: "/c1.jpg",
         variants: [
             { id: 401, size: "S", color: "Black", price: 15000 },
             { id: 402, size: "M", color: "White", price: 15000 },
             { id: 403, size: "L", color: "Brown", price: 17000 },
         ],        
     },
-    {id:5, name: "BALOGUN", description:"Strength and grace. A celebration of character.", slug: "balogun", img: "/c1.jpg",
+    {id:5, name: "BALOGUN", description:"Strength and grace. A celebration of character.", slug: "product-5", img: "/c1.jpg",
         variants: [
             { id: 501, size: "S", color: "Black", price: 15000 },
             { id: 502, size: "M", color: "White", price: 15000 },
             { id: 503, size: "L", color: "Brown", price: 17000 },
         ],        
     },
-    {id:6, name: "ICONIC PIECES", description:"Signature designs. Timeless statements.", slug: "iconic-pieces", img: "/c1.jpg",
+    {id:6, name: "ICONIC PIECES", description:"Signature designs. Timeless statements.", slug: "product-6", img: "/c1.jpg",
         variants: [
             { id: 601, size: "S", color: "Black", price: 15000 },
             { id: 602, size: "M", color: "White", price: 15000 },
             { id: 603, size: "L", color: "Brown", price: 17000 },
         ],
     },
+    {id:7, name: "PRODUCT 7", description:"A statement piece that bridges tradition and contemporary design.", slug: "product-7", img: "/c1.jpg",
+        variants: [
+            { id: 701, size: "S", color: "Black", price: 24000 },
+            { id: 702, size: "M", color: "Black", price: 24000 },
+            { id: 703, size: "L", color: "Brown", price: 24000 },
+        ],
+    },
+    {id:8, name: "PRODUCT 8", description:"A statement piece that bridges tradition and contemporary design.", slug: "product-8", img: "/c1.jpg",
+        variants: [
+            { id: 801, size: "S", color: "Black", price: 17000 },
+            { id: 802, size: "M", color: "White", price: 17000 },
+            { id: 803, size: "L", color: "Brown", price: 17000 },
+        ],
+    },
+    {id:9, name: "PRODUCT 9", description:"A statement piece that bridges tradition and contemporary design.", slug: "product-9", img: "/c1.jpg",
+        variants: [
+            { id: 901, size: "S", color: "Black", price: 21000 },
+            { id: 902, size: "M", color: "White", price: 21000 },
+            { id: 903, size: "L", color: "Brown", price: 21000 },
+        ],
+    },
 ]
 export default function ProductPage({ params }) {
 const { addToCart } = useStore();
 
-const product = products.find(p => p.id === params.id);
+const product = products.find(
+    (p) => p.slug === params.id || String(p.id) === String(params.id)
+);
     if (!product) return notFound();
 
 const [selectedSize, setSelectedSize] = useState(null);

@@ -24,7 +24,7 @@ export default function Collections() {
             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
                 {collections.map((collection)=>(
                     <Link key={collection.id} href={`/collections/${collection.slug}`} className="text-black block h-full">
-                        <div className="bg-white border border-black overflow-hidden shadow-sm hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1 flex flex-col">
+                        <div className="bg-white border border-black overflow-hidden transform transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_10px_18px_-10px_rgba(0,0,0,0.55)] flex flex-col">
                             <div className="relative group bg-white overflow-hidden aspect-3/4 flex items-center justify-center">
                                 <Image 
                                     src={collection.img}

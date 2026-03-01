@@ -28,9 +28,9 @@ const collections = [
 
 export default function CollectionHighlights() {
     return (
-        <section className="w-full py-12 sm:py-16 bg-white text-center border-b border-black overflow-x-hidden">
+        <section className="w-full py-12 sm:py-8 bg-white text-center overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <h1 className="text-3xl md:text-4xl font-normal text-black pb-3 tracking-widest">COLLECTION HIGHLIGHTS</h1>
+                <h1 className="text-3xl md:text-4xl font-semibold text-black pb-3 tracking-widest">COLLECTION HIGHLIGHTS</h1>
                 <p className="mt-4 text-gray-600">
                 </p>
 
@@ -41,7 +41,7 @@ export default function CollectionHighlights() {
                                 href={`/collections/${collection.slug}`}
                                 className="text-black block h-full"
                             >
-                                <div className="bg-white border border-black overflow-hidden shadow-sm hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1 flex flex-col h-full">
+                                <div className="bg-white border border-black overflow-hidden flex flex-col h-full transform transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_10px_18px_-10px_rgba(0,0,0,0.55)]">
                                     <div className="relative bg-white overflow-hidden aspect-3/4 flex items-center justify-center">
                                         <Image
                                             src={collection.img}
@@ -65,5 +65,6 @@ export default function CollectionHighlights() {
         </section>
     );
 }
+
 
 

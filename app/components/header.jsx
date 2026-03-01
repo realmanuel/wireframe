@@ -76,7 +76,7 @@
             {/* Desktop nav */}
             <nav className="hidden lg:flex gap-7 text-sm">
                 {links.map(([name, href]) => (
-                <Link key={name} href={href} className="hover:border-b-2 text-black">
+                <Link key={name} href={href} className="text-black border-b-2 border-transparent hover:border-black transition-colors">
                     {name}
                 </Link>
                 ))}
@@ -84,7 +84,7 @@
 
 
             <button
-                className="lg:hidden fixed z-[60] left-1/2 -translate-x-1/2 h-9 w-9 sm:h-10 sm:w-10 hover:opacity-60 transition-opacity p-1  rounded hover:border-2 hover:border-yellow-400"
+                className="lg:hidden fixed z-[60] left-1/2 -translate-x-1/2 h-9 w-9 sm:h-10 sm:w-10 hover:opacity-60 transition-colors p-1 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none"
                 onClick={() => setMenuOpen((prev) => !prev)}
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
@@ -112,13 +112,13 @@
                 
                 {/* SEARCH */}
                 <MagnifyingGlassIcon
-                className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400"
+                className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded border-2 border-transparent hover:border-yellow-400 transition-colors"
                 onClick={() => setSearchOpen(true)}
                 
                 />
-                <UserIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <UserIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded border-2 border-transparent hover:border-yellow-400 transition-colors" />
                 <div className="relative">
-                <HeartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <HeartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded border-2 border-transparent hover:border-yellow-400 transition-colors" />
                 {wishlist.length > 0 && (
                     <span className="absolute -top-1 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                         {wishlist.length}
@@ -126,8 +126,8 @@
                 )}
                 </div>
                 
-                <button onClick={()=> setIsCartOpen(true)} className="relative">
-                    <ShoppingCartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded transition hover:border-2 hover:border-yellow-400" />
+                <button onClick={()=> setIsCartOpen(true)} className="relative rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
+                    <ShoppingCartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded" />
                     {cart.length > 0 && (
                         <span className="absolute -top-1 -right-2 bg-white text-black text-xs rounded-full px-1">
                             {cart.length}
@@ -154,7 +154,7 @@
                 className="flex-1 min-w-0 border px-3 sm:px-4 py-2"
                 />
 
-                <button onClick={() => setSearchOpen(false)} className="shrink-0 p-1 rounded hover:border-2 hover:border-yellow-400 transition cursor-pointer">
+                <button onClick={() => setSearchOpen(false)} className="shrink-0 p-1 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors cursor-pointer">
                 <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-black" />
                 </button>
             </div>
@@ -186,7 +186,7 @@
                     <div key={name}>
                         <Link
                             href={href}
-                            className="block hover:border transition-opacity py-3 px-4"
+                            className="block border border-transparent hover:border-black transition-colors py-3 px-4"
                             onClick={() => setMenuOpen(false)}
                         >
                             {name}

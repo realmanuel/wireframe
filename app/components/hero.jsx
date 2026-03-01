@@ -9,7 +9,7 @@ export default function Hero(){
             </h2>
             
             {/* Font size: 4xl on mobile, 7xl on desktop */}
-            <h1 className="text-5xl md:text-7xl font-normal mb-6 leading-tight text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-semibold mb-6 leading-tight text-center md:text-left">
                 <span className="block">TIMELESS</span> 
                 <span className="block">ELEGANCE,</span>
                 <span className="block">REIMAGINED</span>

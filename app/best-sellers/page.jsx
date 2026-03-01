@@ -48,17 +48,17 @@ const bestSellers =[
 
 ]
 
-export default function Shop(){
+export default function BestSellers(){
     const [selectedProduct, setSelectedProduct] = useState(null);
 
 
 
 
     return(
-        <section className="mt-0 min-h-screen flex flex-col justify-center items-start py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-20 bg-white text-black border-b-2 border-black overflow-x-hidden">
+        <section className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
             <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-6 py-8 bg-white">
                 {/**TITLE, */}
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-center mt-12 mb-12 text-black tracking-widest">BEST SELLERS</h1>
+                <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">BEST SELLERS</h1>
 
 
 
@@ -75,11 +75,11 @@ export default function Shop(){
                 </div>
                 
                 <div className="flex justify-center gap-3 mt-10 text-sm">
-                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">Prev</button>
-                    <button className="px-3 py-1 border aspect-square bg-black text-white">1</button>
-                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">2</button>
-                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">3</button>
-                    <button className="px-3 py-1 border aspect-square hover:bg-black hover:text-white">Next</button>
+                    <button className="px-3 py-1 border hover:bg-black hover:text-white">Prev</button>
+                    <button className="px-3 py-1 border hover:bg-black hover:text-white">1</button>
+                    <button className="px-3 py-1 border hover:bg-black hover:text-white">2</button>
+                    <button className="px-3 py-1 border hover:bg-black hover:text-white">3</button>
+                    <button className="px-3 py-1 border hover:bg-black hover:text-white">Next</button>
 
                 </div>
 
