@@ -71,7 +71,7 @@ export default function Footer(){
             </svg>
             </a>
             
-            <a target href="https://www.instagram.com/ituenbasiworld/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
+            <a href="https://www.instagram.com/ituenbasiworld/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <rect x="3" y="3" width="18" height="18" rx="4" ry="4" strokeWidth="1.5" />
             <circle cx="12" cy="12" r="3.2" strokeWidth="1.5" />
