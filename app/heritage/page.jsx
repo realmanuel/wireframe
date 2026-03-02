@@ -50,7 +50,7 @@ const timelines = [
 
 export default function Heritage() {
     return (
-        <section className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
+        <section className="mt-0 min-h-screen flex flex-col justify-center mx-auto items-start py-16 px-6 bg-white text-black border-b border-black overflow-x-hidden">
         <div className="max-w-4xl mb-12 m-auto text-center">
             <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">OUR HERITAGE</h1>
             <h2 className="text-xl mb-12 italic">Our heritage is not nostalgia. It is a living language.</h2>

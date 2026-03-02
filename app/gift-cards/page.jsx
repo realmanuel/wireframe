@@ -14,7 +14,7 @@ const giftCards = [
 export default function GiftCards() {
     const [customAmount, setCustomAmount] = useState("");
     return (
-        <div className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
+        <div className="mt-0 min-h-screen flex flex-col justify-center items-start px-6 py-16 mx-auto bg-white text-black border-b border-black overflow-x-hidden">
 
         {/* Hero */}
         <div className="max-w-4xl mb-18 m-auto text-center">
