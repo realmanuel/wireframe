@@ -70,8 +70,8 @@ export default function Shop(){
 
 
     return(
-        <div className="mt-0 min-h-screen flex flex-col justify-center items-start py-16 sm:py-16 md:py-16 bg-white text-black border-b border-black overflow-x-hidden">
-            <div className="w-full max-w-full mx-auto  py-8 bg-white">
+        <div className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
+            <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-6 py-8 bg-white">
                 {/**TITLE, FILTERS */}
                 <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mb-12 text-black tracking-widest">SHOP</h1>
                 <h3 className="text-black text-sm text-center mb-10">Everyday icons. Bold reimaginings</h3>
