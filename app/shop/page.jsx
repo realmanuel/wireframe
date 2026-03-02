@@ -70,10 +70,10 @@ export default function Shop(){
 
 
     return(
-        <section className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
+        <div className="mt-0 min-h-screen flex flex-col justify-center items-start py-16 sm:py-16 md:py-16 bg-white text-black border-b border-black overflow-x-hidden">
             <div className="w-full max-w-full mx-auto  py-8 bg-white">
                 {/**TITLE, FILTERS */}
-                <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">SHOP</h1>
+                <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mb-12 text-black tracking-widest">SHOP</h1>
                 <h3 className="text-black text-sm text-center mb-10">Everyday icons. Bold reimaginings</h3>
 
                 {/**Filters */}
@@ -114,7 +114,7 @@ export default function Shop(){
                 onClose={() => setSelectedProduct(null)}
             />
             )}
-        </section>
+        </div>
     )
 }
 

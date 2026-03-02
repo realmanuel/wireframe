@@ -10,7 +10,7 @@ export default function ProductCard({ product, onQuickAdd, productHref }) {
     const isWishlisted = wishlist.some((item) => item.id === product.id);
     return (
         <div className="px-1">
-            <div className="relative bg-white pb-3 transform transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_10px_18px_-10px_rgba(0,0,0,0.55)] border border-black gap-8 m-3">
+            <div className="group relative bg-white pb-3 transform transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_10px_18px_-10px_rgba(0,0,0,0.55)] border border-black gap-8 m-3">
                 {/* Heart */}
                 <button
                     onClick={() => toggleWishlist(product)}
@@ -21,7 +21,7 @@ export default function ProductCard({ product, onQuickAdd, productHref }) {
                     className={ isWishlisted ? "fill-yellow-300" : ""}
                     />
                 </button>
-                <div className="group bg-gray-200 overflow-hidden aspect-square relative flex items-center justify-center">
+                <div className="bg-gray-200 overflow-hidden aspect-square relative flex items-center justify-center">
                 
                 
                     <Image
@@ -32,7 +32,7 @@ export default function ProductCard({ product, onQuickAdd, productHref }) {
                     />
                     <button
                         onClick={() => { onQuickAdd(product); }}
-                        className="absolute bottom-0 left-0 right-0 justify-around bg-black text-white py-2 px-4 text-sm opacity-100 translate-y-0 md:opacity-0 md:translate-y-full transition-all duration-300 ease-out md:group-hover:opacity-100 md:group-hover:translate-y-0 hover:bg-yellow-400"
+                        className="absolute bottom-0 left-0 right-0 justify-around bg-black text-white py-2 px-4 text-sm opacity-100 translate-y-0 transition-all duration-300 ease-out md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 md:group-focus-within:opacity-100 md:group-focus-within:translate-y-0 hover:bg-yellow-400 focus-visible:bg-yellow-400"
                     >
                         Quick Add
                     </button>
