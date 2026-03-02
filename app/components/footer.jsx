@@ -15,7 +15,7 @@ export default function Footer(){
         <footer className="bg-white w-full border-t-2 border-black overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-8 md:gap-12 text-black">
                 <div>
-                    <h3 className="font-normal mb-9">NEWSLETTER</h3>
+                    <h3 className="font-normal mb-9 tracking-widest">NEWSLETTER</h3>
                         <div className="flex flex-col sm:flex-row gap-2 items-center">
                             <input className="flex-1 w-full px-3 py-3 border text-sm" 
                                     placeholder="Your Email"
@@ -37,7 +37,7 @@ export default function Footer(){
                     <Link
                         key={name}
                         href={href}
-                        className="block text-xs py-2 border-2 border-transparent hover:border-black transition-colors"
+                        className="block text-sm py-2 border-2 border-transparent hover:border-black transition-colors"
                     >
                         {name}
                     </Link>
@@ -49,10 +49,10 @@ export default function Footer(){
                     <h3 className="font-normal mb-6">CONNECT</h3>
                     <div className="space-y-4">
                         <a href="tel:+2349037198414" className="block border-2 border-transparent hover:border-black transition-colors">
-                            <p className="text-xs py-2">+234 903 719 8414</p>
+                            <p className="text-sm py-2">+234 903 719 8414</p>
                         </a>
                         <a href="mailto:ask@ituenbasi.com" className="block border-2 border-transparent hover:border-black transition-colors">
-                            <p className="text-xs py-2">ask@ituenbasi.com</p>
+                            <p className="text-sm py-2">ask@ituenbasi.com</p>
                         </a>
                     </div>
                 </div>

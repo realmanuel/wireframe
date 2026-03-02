@@ -14,13 +14,13 @@ import Image from "next/image";
         return(
             <div className="max-w-full mx-auto px-6 py-16 bg-white">
                 {/**Page Title */}
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-center mt-12 mb-12 text-black tracking-widest">LOOKBOOK</h1>
+                <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">LOOKBOOK</h1>
                 
                 {/**Lookbook grid */}
                 <div className="grid grid-cols-1 gap-6">
                         {books.map((book) => (
                             <div key={book.id} className="w-full">
-                                <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] bg-gray-100 border border-black">
+                                <div className="relative w-full h-[30rem] sm:h-[40rem] md:h-96 lg:h-[52rem] bg-gray-100 border border-black">
                                     <Image
                                         src={book.img}
                                         alt={book.title}

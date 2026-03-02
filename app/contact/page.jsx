@@ -83,10 +83,10 @@ export default function Contact() {
 
         {/* Title */}
         <div className="text-center max-w-xl mx-auto px-6 mb-8">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-center mt-12 mb-12 text-black tracking-wides">
+            <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">
             CONTACT US
             </h1>
-            <p className="text-base text-gray-800">
+            <p className="text-base text-black">
             We're here to help. Whether you have questions about an order, want to explore couture, or simply want to connect, reach out.
             </p>
         </div>
@@ -170,7 +170,7 @@ export default function Contact() {
 
         {/**ADDRESS */}
         <div className="flex-1 border border-black bg-white p-8">
-            <h2 className="text-2xl font-normal tracking-widest mb-8 mt-8">STORE ADDRESS</h2>
+            <h2 className="text-2xl font-semibold tracking-wide mb-8 mt-8">STORE ADDRESS</h2>
             
             <span className="mb-8 mt-8 space-y-0.5">
                 <p>ITUEN BASI STORE</p>
@@ -181,27 +181,27 @@ export default function Contact() {
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-normal">OPENING HOURS</p>
+                <p className="text-xl mb-7 font-semibold tracking-wide">OPENING HOURS</p>
                 <p>9am - 6pm WAT</p>
                 <p>Tuesdays to Saturdays</p>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-normal">TELEPHONE</p>
+                <p className="text-xl mb-7 font-semibold tracking-wide">TELEPHONE</p>
                 <a target="_blank" rel="noopener noreferrer" href="tel:+2349037198414">
                     <p>+234 903 719 8414</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-normal">EMAIL</p>
+                <p className="text-xl mb-7 font-semibold tracking-wide">EMAIL</p>
                 <a href="mailto:ask@ituenbasi.com">
                     <p>ask@ituenbasi.com</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
-                <p className="text-xl mb-7 font-normal">INSTAGRAM</p>
+                <p className="text-xl mb-7 font-semibold tracking-wide">INSTAGRAM</p>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ituenbasi">
                     <p className="underline">@ituenbasi</p>
                 </a>
@@ -212,7 +212,7 @@ export default function Contact() {
         </div>
         </div>
         {/**CONSULTATION */}
-        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto border border-black mt-10 overflow-hidden">
+        <div className="flex flex-col lg:flex-row max-w-7xl mx-4 sm:mx-6 lg:mx-auto border border-black mt-10 overflow-hidden">
             <div className="w-full lg:w-1/2 p-8">
                 <div className="relative h-64 sm:h-80 md:h-96">
                     <Image 
@@ -224,7 +224,7 @@ export default function Contact() {
                 </div>
             </div>
             <div className="w-full lg:w-1/2 p-8 sm:p-6">
-                <h2 className="font-normal mb-4 mt-4 text-2xl tracking-widest">BOOK A CONSULTATION</h2>
+                <h2 className="mb-4 mt-4 text-2xl font-semibold tracking-wide">BOOK A CONSULTATION</h2>
                 <p>Schedule a personalized consultation with our team. We'll help you find the perfect pieces and answer any questions you may have.</p>
                 <Link target="_blank" rel="noopener noreferrer"  href="https://calendly.com/ituebasi-consultation" className="mt-4 inline-block w-fit px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 

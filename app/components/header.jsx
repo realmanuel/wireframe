@@ -74,9 +74,9 @@
                 <img src="/IBL logo.png" className="h-13" />
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex gap-7 text-sm">
+            <nav className="hidden lg:flex gap-10 text-sm">
                 {links.map(([name, href]) => (
-                <Link key={name} href={href} className="text-black border-b-2 border-transparent hover:border-black transition-colors">
+                <Link key={name} href={href} className="text-black border-b-2 border-transparent hover:border-black transition-colors tracking-wider">
                     {name}
                 </Link>
                 ))}
