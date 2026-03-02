@@ -17,9 +17,9 @@ export default function GiftCards() {
         <div className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
 
         {/* Hero */}
-        <div className="max-w-4xl mb-12 m-auto text-center">
+        <div className="max-w-4xl mb-18 m-auto text-center">
             <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">GIFT CARDS</h1>
-            <h2 className="text-sm sm:text-base mb-12 text-black">Give the gift of timeless elegance. Our gift cards are perfect for any occasion and never expire.</h2>
+            <h2 className="text-sm sm:text-base text-black">Give the gift of timeless elegance. Our gift cards are perfect for any occasion and never expire.</h2>
         </div>
 
         {/* Gift Card Grid */}

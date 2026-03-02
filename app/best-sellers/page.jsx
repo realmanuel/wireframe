@@ -7,7 +7,7 @@ import ProductModal from "../components/ProductModal";
 import QuickAddModal from "../components/QuickAddModal";
 
 const bestSellers =[
-    { id:1, name: "Product 1", slug:"product1", img: "/c1.jpg",
+    { id:1, name: "PRODUCT 1", slug:"product1", img: "/c1.jpg",
         variants: [
             {id:101, size: "S", color: "black", price: 15000},
             {id:102, size: "M", color: "white", price: 15000},
