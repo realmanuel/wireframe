@@ -87,7 +87,7 @@ export default function Contact() {
             CONTACT US
             </h1>
             <p className="text-base text-black">
-            We're here to help. Whether you have questions about an order, want to explore couture, or simply want to connect, reach out.
+            We are here to help. Whether you have questions about an order, want to explore couture, or simply want to connect, reach out.
             </p>
         </div>
 
@@ -225,7 +225,7 @@ export default function Contact() {
             </div>
             <div className="w-full lg:w-1/2 p-8 sm:p-6">
                 <h2 className="mb-4 mt-4 text-2xl font-semibold tracking-wide">BOOK A CONSULTATION</h2>
-                <p>Schedule a personalized consultation with our team. We'll help you find the perfect pieces and answer any questions you may have.</p>
+                <p>Schedule a personalized consultation with our team. We will help you find the perfect pieces and answer any questions you may have.</p>
                 <Link target="_blank" rel="noopener noreferrer"  href="https://calendly.com/ituebasi-consultation" className="mt-4 inline-block w-fit px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                     text-sm tracking-widest"
@@ -237,6 +237,9 @@ export default function Contact() {
         </div>
     );
 }
+
+
+
 
 
 

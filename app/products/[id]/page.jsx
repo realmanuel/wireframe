@@ -76,20 +76,22 @@ const { addToCart } = useStore();
 const product = products.find(
     (p) => p.slug === params.id || String(p.id) === String(params.id)
 );
-    if (!product) return notFound();
+const baseProduct = product ?? products[0];
 
 const [selectedSize, setSelectedSize] = useState(null);
 const [selectedColor, setSelectedColor] = useState(null);
 const [quantity, setQuantity] = useState(1);
 
-const sizes = [...new Set(product.variants.map(v => v.size))];
-const colors = [...new Set(product.variants.map(v => v.color))];
+const sizes = [...new Set(baseProduct.variants.map(v => v.size))];
+const colors = [...new Set(baseProduct.variants.map(v => v.color))];
 
 const selectedVariant = useMemo(() => {
-        return product.variants.find(
+        return baseProduct.variants.find(
         v => v.size === selectedSize && v.color === selectedColor
         );
-    }, [selectedSize, selectedColor, product.variants]);
+    }, [selectedSize, selectedColor, baseProduct.variants]);
+
+    if (!product) return notFound();
 
     const handleAdd = () => {
         if (!selectedVariant) return;

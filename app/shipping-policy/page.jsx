@@ -27,7 +27,7 @@ export default function ShippingPolicy() {
             • Express delivery available: 3-5 business days
         </p>
         <p className="m-3 text-sm">
-            • Duties and taxes may apply and are the customer's responsibility
+            • Duties and taxes may apply and are the customer responsibility
         </p>
 
         <h3 className="font-normal text-xl text-start mt-11">TRACKING</h3><hr />
@@ -41,4 +41,6 @@ export default function ShippingPolicy() {
         </PolicyLayout>
     );
 }
+
+
 

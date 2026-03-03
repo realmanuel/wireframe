@@ -3,7 +3,6 @@
 import {useState} from "react";
 import Link from "next/link";
 import ProductCard from "../components/ProductCard";
-import ProductModal from "../components/ProductModal";
 import QuickAddModal from "../components/QuickAddModal";
 
 const bestSellers =[
@@ -54,17 +53,17 @@ export default function BestSellers(){
 
 
     return(
-        <section className="mt-0 min-h-screen flex flex-col justify-center items-start py-10 sm:py-15 md:py-20 bg-white text-black border-b border-black overflow-x-hidden">
-            <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-6 py-8 bg-white">
+        <section className="min-h-screen bg-white text-black border-b border-black overflow-x-clip">
+            <div className="w-full max-w-[1800px] mx-auto px-[clamp(0.75rem,2.5vw,3rem)] py-[clamp(1.5rem,3vw,3.5rem)]">
                 {/**TITLE, */}
-                <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mb-12 text-black tracking-widest">BEST SELLERS</h1>
+                <h1 className="text-[clamp(1.4rem,2.4vw,3rem)] font-semibold mt-12 text-center mb-[clamp(1.25rem,2.8vw,3.5rem)] text-black tracking-[clamp(0.08em,0.2vw,0.2em)]">BEST SELLERS</h1>
 
 
 
                 {/**GRID */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-[clamp(0.5rem,1vw,1.25rem)]">
                     {bestSellers.map((product) =>(
-                        <Link key={product.id} href={`/best-sellers/${product.slug}`}>
+                        <Link key={product.id} href={`/best-sellers/${product.slug}`} className="block h-full min-w-0">
                             <ProductCard
                                 product={product}
                                 onQuickAdd={()=> setSelectedProduct(product)}
@@ -73,12 +72,12 @@ export default function BestSellers(){
                     ))}
                 </div>
                 
-                <div className="flex justify-center gap-3 mt-10 text-sm">
-                    <button className="px-3 py-1 border hover:bg-black hover:text-white">Prev</button>
-                    <button className="px-3 py-1 border hover:bg-black hover:text-white">1</button>
-                    <button className="px-3 py-1 border hover:bg-black hover:text-white">2</button>
-                    <button className="px-3 py-1 border hover:bg-black hover:text-white">3</button>
-                    <button className="px-3 py-1 border hover:bg-black hover:text-white">Next</button>
+                <div className="flex flex-wrap justify-center gap-3 mt-[clamp(1.25rem,2.3vw,2.5rem)] text-[clamp(0.82rem,0.9vw,1rem)]">
+                    <button className="whitespace-nowrap px-[clamp(0.55rem,0.8vw,0.9rem)] py-[clamp(0.25rem,0.45vw,0.45rem)] border hover:bg-black hover:text-white">Prev</button>
+                    <button className="whitespace-nowrap px-[clamp(0.55rem,0.8vw,0.9rem)] py-[clamp(0.25rem,0.45vw,0.45rem)] border hover:bg-black hover:text-white">1</button>
+                    <button className="whitespace-nowrap px-[clamp(0.55rem,0.8vw,0.9rem)] py-[clamp(0.25rem,0.45vw,0.45rem)] border hover:bg-black hover:text-white">2</button>
+                    <button className="whitespace-nowrap px-[clamp(0.55rem,0.8vw,0.9rem)] py-[clamp(0.25rem,0.45vw,0.45rem)] border hover:bg-black hover:text-white">3</button>
+                    <button className="whitespace-nowrap px-[clamp(0.55rem,0.8vw,0.9rem)] py-[clamp(0.25rem,0.45vw,0.45rem)] border hover:bg-black hover:text-white">Next</button>
 
                 </div>
 

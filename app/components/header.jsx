@@ -1,10 +1,10 @@
     "use client";
 
     import { useState, useEffect } from "react";
+    import Image from "next/image";
     import Link from "next/link";
     import { useStore } from "../../context/storeContext";
-    import CartSidebar from "./CartSidebar";    
-    import Image from "next/image"
+    import CartSidebar from "./CartSidebar";
 
     import {
     MagnifyingGlassIcon,
@@ -16,7 +16,7 @@
     } from "@heroicons/react/24/outline";
 
     export default function Header() {
-    const { wishlist, setIsCartOpen, cart } = useStore();
+    const { wishlist, setIsCartOpen, cartCount } = useStore();
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -71,10 +71,10 @@
             >
 
             {/* Logo */}
-                <img src="/IBL logo.png" className="h-13" />
+                <Image src="/IBL logo.png" alt="Ituen Basi logo" width={120} height={52} className="h-13 w-auto" />
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex gap-10 text-sm">
+            <nav className="hidden lg:flex px-3 gap-8 text-sm">
                 {links.map(([name, href]) => (
                 <Link key={name} href={href} className="text-black border-b-2 border-transparent hover:border-black transition-colors tracking-wider">
                     {name}
@@ -128,9 +128,9 @@
                 
                 <button onClick={()=> setIsCartOpen(true)} className="relative rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
                     <ShoppingCartIcon className="h-7 w-7 sm:h-10 sm:w-10 cursor-pointer stroke-black p-1 sm:p-2 rounded" />
-                    {cart.length > 0 && (
+                    {cartCount > 0 && (
                         <span className="absolute -top-1 -right-2 bg-white text-black text-xs rounded-full px-1">
-                            {cart.length}
+                            {cartCount}
                         </span>
                     )}
                 </button>

@@ -55,13 +55,13 @@ export default function Heritage() {
             <h1 className="text-xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold text-center mt-12 mb-12 text-black tracking-widest">OUR HERITAGE</h1>
             <h2 className="text-xl mb-12 italic">Our heritage is not nostalgia. It is a living language.</h2>
             <p className="mb-9 text-left">
-            We draw from culture, arts, and the rich tapestry of Nigerian tradition. Our reinterpretation of Ankara is not about replication - It's about evolution. We honor the past while creating for the future.
+            We draw from culture, arts, and the rich tapestry of Nigerian tradition. Our reinterpretation of Ankara is not about replication - It is about evolution. We honor the past while creating for the future.
             </p>
             <p className="mb-9 text-left">
             Every piece is crafted with artisanal attention to detail. We practice waste-conscious making, ensuring that every thread serves a purpose. Our commitment is to timeless elegance, not trend-following.
             </p>
             <p className="mb-9 text-left">
-            Founded on the belief that fashion should reflect individuality and heritage, Ituen Basi was born from a vision to create pieces that tell stories. Stories of who we are, where we come from, and where we're going.
+            Founded on the belief that fashion should reflect individuality and heritage, Ituen Basi was born from a vision to create pieces that tell stories. Stories of who we are, where we come from, and where we are going.
             </p>
         </div>
 
@@ -101,6 +101,9 @@ export default function Heritage() {
         </section>
     );
 }
+
+
+
 
 
 

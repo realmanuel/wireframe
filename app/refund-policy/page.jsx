@@ -30,7 +30,7 @@ export default function RefundPolicy() {
             • Return items using the provided shipping label
         </p>
         <p className="m-3 text-sm">
-            • Once we receive and inspect the items, we'll process your refund
+            • Once we receive and inspect the items, we will process your refund
         </p>
         <p className="m-3 text-sm">
             • Refunds are issued to the original payment method
@@ -51,4 +51,6 @@ export default function RefundPolicy() {
         </PolicyLayout>
     );
 }
+
+
 
