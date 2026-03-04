@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ProductCard from "../components/ProductCard";
 import Link from "next/link";
@@ -131,7 +131,7 @@ function formatColor(value) {
     return String(value).charAt(0).toUpperCase() + String(value).slice(1).toLowerCase();
 }
 
-export default function Shop() {
+function ShopContent() {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -333,5 +333,13 @@ export default function Shop() {
 
             {selectedProduct && <QuickAddModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
         </div>
+    );
+}
+
+export default function Shop() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-white" />}>
+            <ShopContent />
+        </Suspense>
     );
 }
