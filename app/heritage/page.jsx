@@ -29,7 +29,7 @@ const timelines = [
     {
         id: 1,
         year: "2008",
-        event: "Ituen Basi founded. A vision to bridge heritage and contemporary luxury.",
+        event: "Magic Bass founded. A vision to bridge heritage and contemporary luxury.",
     },
     {
         id: 2,
@@ -43,7 +43,7 @@ const timelines = [
     },
     {
         id: 4,
-        year: "2024",
+        year: "2020",
         event: "Continuing to create. Every piece a story, every collection a conversation.",
     },            
 ]
@@ -61,7 +61,7 @@ export default function Heritage() {
             Every piece is crafted with artisanal attention to detail. We practice waste-conscious making, ensuring that every thread serves a purpose. Our commitment is to timeless elegance, not trend-following.
             </p>
             <p className="mb-9 text-left">
-            Founded on the belief that fashion should reflect individuality and heritage, Ituen Basi was born from a vision to create pieces that tell stories. Stories of who we are, where we come from, and where we are going.
+            Founded on the belief that fashion should reflect individuality and heritage, Magic Bass was born from a vision to create pieces that tell stories. Stories of who we are, where we come from, and where we are going.
             </p>
         </div>
 

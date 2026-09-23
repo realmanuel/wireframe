@@ -51,8 +51,8 @@ export default function Footer(){
                         <a href="tel:+2349037198414" className="block border-2 border-transparent hover:border-black transition-colors">
                             <p className="text-sm py-2">+234 903 719 8414</p>
                         </a>
-                        <a href="mailto:ask@ituenbasi.com" className="block border-2 border-transparent hover:border-black transition-colors">
-                            <p className="text-sm py-2">ask@ituenbasi.com</p>
+                        <a href="mailto:ask@magicbass.com" className="block border-2 border-transparent hover:border-black transition-colors">
+                            <p className="text-sm py-2">ask@magicbass.com</p>
                         </a>
                     </div>
                 </div>
@@ -60,18 +60,21 @@ export default function Footer(){
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
-                <p className="text-xs text-black">&copy; {new Date().getFullYear()} Ituenbasi</p>
+                <p className="text-xs text-black">&copy; {new Date().getFullYear()} MagicBass</p>
                         {/**ICONS */}
                 <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/ituenbasi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <rect x="3" y="3" width="18" height="18" rx="4" ry="4" strokeWidth="1.5" />
-            <circle cx="12" cy="12" r="3.2" strokeWidth="1.5" />
-            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-            </svg>
+            <a href="https://x.com/Reallnxgga" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-black"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
             </a>
             
-            <a href="https://www.instagram.com/ituenbasiworld/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
+            <a href="https://www.instagram.com/thereal_.manny" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <rect x="3" y="3" width="18" height="18" rx="4" ry="4" strokeWidth="1.5" />
             <circle cx="12" cy="12" r="3.2" strokeWidth="1.5" />

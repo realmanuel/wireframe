@@ -71,7 +71,7 @@
             >
 
             {/* Logo */}
-                <Image src="/IBL logo.png" alt="Ituen Basi logo" width={120} height={52} className="h-13 w-auto" />
+                <Image src="/Logo.png" alt="Magic Bass logo" width={120} height={52} className="h-13 w-auto" />
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex px-3 gap-8 text-sm">

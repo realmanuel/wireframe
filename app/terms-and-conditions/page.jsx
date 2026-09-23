@@ -38,7 +38,7 @@ export default function TermsOfService() {
 
         <h3 className="font-normal text-xl text-start mt-11">INTELLECTUAL PROPERTY</h3><hr />
         <p className="m-3 text-sm">
-            • All content on this website is the property of Ituen Basi
+            • All content on this website is the property of Magic Bass
         </p>
         <p className="m-3 text-sm">
             • Images, designs, and text are protected by copyright

@@ -173,9 +173,9 @@ export default function Contact() {
             <h2 className="text-2xl font-semibold tracking-wide mb-8 mt-8">STORE ADDRESS</h2>
             
             <span className="mb-8 mt-8 space-y-0.5">
-                <p>ITUEN BASI STORE</p>
-                <p>215b Etim Inyang Crescent,</p>
-                <p>off Muri Okunola,</p>
+                <p>MAGIC BASS STORE</p>
+                <p>251 Adam Crescent,</p>
+                <p>off Muri Nana,</p>
                 <p>Victoria Island,</p>
                 <p>Lagos, Nigeria</p>
             </span>
@@ -189,24 +189,28 @@ export default function Contact() {
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
                 <p className="text-xl mb-7 font-semibold tracking-wide">TELEPHONE</p>
                 <a target="_blank" rel="noopener noreferrer" href="tel:+2349037198414">
-                    <p>+234 903 719 8414</p>
+                    <p>+234 000 000 0000</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
                 <p className="text-xl mb-7 font-semibold tracking-wide">EMAIL</p>
-                <a href="mailto:ask@ituenbasi.com">
-                    <p>ask@ituenbasi.com</p>
+                <a href="mailto:ask@magicbass.com">
+                    <p>ask@magicbass.com</p>
                 </a>
             </span>
 
             <span className="flex flex-col justify-between mb-8 mt-8 space-y-0.5">
                 <p className="text-xl mb-7 font-semibold tracking-wide">INSTAGRAM</p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ituenbasi">
-                    <p className="underline">@ituenbasi</p>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/thereal_.manny">
+                    <p className="underline">@magicbass</p>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ituenbasiworld/">
-                    <p className="underline">@ituenbasiworld</p>
+            </span>
+
+            <span>
+                <p className="text-xl mb-7 font-semibold tracking-wide">X(TWITTER)</p>
+                <a target="_blank" rel="noopener noreferrer" href="https://x.com/Reallnxgga">
+                    <p className="underline">@magicbass</p>
                 </a>
             </span>
         </div>
@@ -226,7 +230,7 @@ export default function Contact() {
             <div className="w-full lg:w-1/2 p-8 sm:p-6">
                 <h2 className="mb-4 mt-4 text-2xl font-semibold tracking-wide">BOOK A CONSULTATION</h2>
                 <p>Schedule a personalized consultation with our team. We will help you find the perfect pieces and answer any questions you may have.</p>
-                <Link target="_blank" rel="noopener noreferrer"  href="https://calendly.com/ituebasi-consultation" className="mt-4 inline-block w-fit px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
+                <Link target="_blank" rel="noopener noreferrer"  href="https://calendly.com/magicbass-consultation" className="mt-4 inline-block w-fit px-4 py-4 border border-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-75
                                     hover:ring-2 hover:ring-offset-2 hover:ring-black bg-white text-black hover:bg-black hover:text-white 
                                     text-sm tracking-widest"
                 >

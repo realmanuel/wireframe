@@ -4,6 +4,12 @@ import Footer from "./components/footer";
 import {StoreProvider} from "../context/storeContext"
 import {Poppins} from "next/font/google"
 
+export const metadata = {
+  icons: {
+    icon: "/Icon.png",
+  },
+};
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight:["100", "200", "300"]
