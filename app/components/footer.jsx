@@ -49,7 +49,7 @@ export default function Footer(){
                     <h3 className="font-semibold mb-6 tracking-widest">CONNECT</h3>
                     <div className="space-y-4">
                         <a href="tel:+2349037198414" className="block border-2 border-transparent hover:border-black transition-colors">
-                            <p className="text-sm py-2">+234 903 719 8414</p>
+                            <p className="text-sm py-2">+234 000 000 0000</p>
                         </a>
                         <a href="mailto:ask@magicbass.com" className="block border-2 border-transparent hover:border-black transition-colors">
                             <p className="text-sm py-2">ask@magicbass.com</p>
@@ -61,6 +61,7 @@ export default function Footer(){
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
                 <p className="text-xs text-black">&copy; {new Date().getFullYear()} MagicBass</p>
+                <p className="text-xs text-black">Built by Faniyi Immanuel</p>
                         {/**ICONS */}
                 <div className="flex items-center gap-4">
             <a href="https://x.com/Reallnxgga" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded border-2 border-transparent hover:border-yellow-400 focus-visible:border-4 focus-visible:border-yellow-400 focus-visible:outline-none transition-colors">
